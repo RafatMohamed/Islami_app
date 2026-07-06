@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami_app/core/resources_app.dart';
 import 'package:islami_app/features/main_app_view/view/main_app_view.dart';
 import 'package:islami_app/features/on_boarding/model/on_boarding_model.dart';
+import '../../../core/shared/shared_pref_hive.dart';
 import 'custom_app_bar_on_boarding.dart';
 import 'custom_bottom_action_on_boarding.dart';
 import 'custom_info_view_body_on_board.dart';
@@ -23,6 +24,11 @@ class _BodyOnBoardingViewState extends State<BodyOnBoardingView> {
     super.initState();
   }
 
+  @override
+  void dispose() {
+    super.dispose();
+    controller.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.sizeOf(context);
@@ -72,7 +78,6 @@ class _BodyOnBoardingViewState extends State<BodyOnBoardingView> {
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   final item = itemsOnBoarderList[index];
-                  index = currentIndex;
                   return SizedBox(
                     width: size.width,
                     child: Padding(
@@ -98,6 +103,9 @@ class _BodyOnBoardingViewState extends State<BodyOnBoardingView> {
                               onTapNext:() {
                                 onTapAction(size: size,isFinish: currentIndex==itemsOnBoarderList.length-1);
                               } ,
+                              onClickDots: (index) {
+                                onTapDots(size: size,index: index);
+                              },
                             ),
                           ),
                         ],
@@ -119,6 +127,7 @@ class _BodyOnBoardingViewState extends State<BodyOnBoardingView> {
             child: CustomTextActionOnBoarding(
               text: AppText.skip,
               onTap: () {
+                SharedPrefHiveImp.instance.saveObj(true);
                 Navigator.pushReplacementNamed(context, MainAppView.routeName);
               },
             ),
@@ -128,13 +137,20 @@ class _BodyOnBoardingViewState extends State<BodyOnBoardingView> {
     );
   }
 
-  void onTapAction({required Size size, final bool isNext = true,bool isFinish=false}){
-    isFinish?Navigator.pushReplacementNamed(context, MainAppView.routeName):null;
-
+  void onTapAction({required Size size, final bool isNext = true,bool isFinish=false})async{
+    if(isFinish){
+      SharedPrefHiveImp.instance.saveObj(true);
+      await Navigator.pushReplacementNamed(context, MainAppView.routeName);
+    }
     isNext?currentIndex++:currentIndex--;
-
     setState(() {
-      controller.animateTo(currentIndex*size.width, duration: const Duration(milliseconds: 500), curve: Curves.easeIn);
+      controller.animateTo(currentIndex*size.width, duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
+    });
+  }
+  void onTapDots({required final Size size,required final int index})async{
+    setState(() {
+      currentIndex=index;
+      controller.animateTo(currentIndex*size.width, duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
     });
   }
 }
