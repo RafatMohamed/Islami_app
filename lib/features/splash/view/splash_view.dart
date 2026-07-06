@@ -1,0 +1,13 @@
+import 'package:flutter/material.dart';
+import '../widgets/body_spash_view.dart';
+
+class SplashView extends StatelessWidget {
+  const SplashView({super.key});
+  static const String routeName = "/";
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: BodySplashView(),
+    );
+  }
+}
