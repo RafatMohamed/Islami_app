@@ -7,13 +7,14 @@ class CustomBottomActionOnBoarding extends StatelessWidget {
   const CustomBottomActionOnBoarding({
     super.key,
     required this.itemsOnBoarderList,
-    required this.currentIndex, required this.onTapNext, required this.onTapBack,
+    required this.currentIndex, required this.onTapNext, required this.onTapBack, required this.onClickDots,
   });
 
   final List<OnBoardingModel> itemsOnBoarderList;
   final int currentIndex;
   final Function() onTapNext;
   final Function() onTapBack;
+  final Function(int) onClickDots;
 
   @override
   Widget build(BuildContext context) {
@@ -29,16 +30,20 @@ class CustomBottomActionOnBoarding extends StatelessWidget {
           ),
         ),
         Row(
-          children: List.generate(itemsOnBoarderList.length, (index) {
+          children: List.generate(
+              itemsOnBoarderList.length, (index) {
             final isSelected = currentIndex == index;
-            return AnimatedContainer(
-              duration: const Duration(milliseconds: 300),
-              margin: const EdgeInsets.symmetric(horizontal: 4),
-              width: isSelected ? 28 : 12,
-              height: 12,
-              decoration: BoxDecoration(
-                color: isSelected ? AppColor.goldColor : Colors.grey,
-                borderRadius: BorderRadius.circular(20),
+            return GestureDetector(
+              onTap: () => onClickDots(index),
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 300),
+                margin: const EdgeInsets.symmetric(horizontal: 4),
+                width: isSelected ? 28 : 12,
+                height: 12,
+                decoration: BoxDecoration(
+                  color: isSelected ? AppColor.goldColor : Colors.grey,
+                  borderRadius: BorderRadius.circular(20),
+                ),
               ),
             );
           }),
