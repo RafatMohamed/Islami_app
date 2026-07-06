@@ -252,6 +252,7 @@ class SvgGenImage {
       theme: theme,
       colorFilter: ColorFilter.mode(color!, BlendMode.srcIn) ,
       clipBehavior: clipBehavior,
+      cacheColorFilter: cacheColorFilter,
     );
   }
 
