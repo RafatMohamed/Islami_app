@@ -6,6 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 class Assets {
   Assets._();
 
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
@@ -13,7 +14,6 @@ class $AssetsImagesGen {
   const $AssetsImagesGen();
 
   final $AssetsPngImagesGen pngImages = const $AssetsPngImagesGen();
-  final $AssetsSvgImagesGen svgImages = const $AssetsSvgImagesGen();
 }
 
 class $AssetsPngImagesGen {
@@ -95,40 +95,14 @@ class $AssetsPngImagesGen {
   );
 }
 
-class $AssetsSvgImagesGen {
-  const $AssetsSvgImagesGen();
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
 
-  final SvgGenImage learningLanguagesBro = const SvgGenImage(
-    'assets/images/svg_images/Learning languages-bro.svg',
-  );
-  final SvgGenImage activitySvgrepoCom = const SvgGenImage(
-    'assets/images/svg_images/activity-svgrepo-com.svg',
-  );
-  final SvgGenImage arabicArtSvgrepoCom = const SvgGenImage(
-    'assets/images/svg_images/arabic-art-svgrepo-com.svg',
-  );
-  final SvgGenImage book1SvgrepoCom = const SvgGenImage(
-    'assets/images/svg_images/book-1-svgrepo-com.svg',
-  );
-  final SvgGenImage bookSquareSvgrepoCom = const SvgGenImage(
-    'assets/images/svg_images/book-square-svgrepo-com.svg',
-  );
-  final SvgGenImage logo = const SvgGenImage(
-    'assets/images/svg_images/logo.svg',
-  );
-  final SvgGenImage
-  pearlNecklaceWithDiamondPendantSvgrepoCom = const SvgGenImage(
-    'assets/images/svg_images/pearl-necklace-with-diamond-pendant-svgrepo-com.svg',
-  );
-  final SvgGenImage quranSvgrepoCom = const SvgGenImage(
-    'assets/images/svg_images/quran-svgrepo-com.svg',
-  );
-  final SvgGenImage radioMinimalisticSvgrepoCom = const SvgGenImage(
-    'assets/images/svg_images/radio-minimalistic-svgrepo-com.svg',
-  );
-  final SvgGenImage soundWave = const SvgGenImage(
-    'assets/images/svg_images/soundWave.svg',
-  );
+  final SvgGenImage hadeth = const SvgGenImage('assets/icons/hadeth.svg');
+  final SvgGenImage quran = const SvgGenImage('assets/icons/quran.svg');
+  final SvgGenImage radio = const SvgGenImage('assets/icons/radio.svg');
+  final SvgGenImage sebha = const SvgGenImage('assets/icons/sebha.svg');
+  final SvgGenImage time = const SvgGenImage('assets/icons/time.svg');
 }
 
 class AssetGenImage {
@@ -250,9 +224,8 @@ class SvgGenImage {
       semanticsLabel: semanticsLabel,
       excludeFromSemantics: excludeFromSemantics,
       theme: theme,
-      colorFilter: ColorFilter.mode(color!, BlendMode.srcIn) ,
+      colorFilter: ColorFilter.mode(color!, BlendMode.srcIn),
       clipBehavior: clipBehavior,
-      cacheColorFilter: cacheColorFilter,
     );
   }
 
