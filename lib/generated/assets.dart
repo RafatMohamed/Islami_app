@@ -250,7 +250,7 @@ class SvgGenImage {
       semanticsLabel: semanticsLabel,
       excludeFromSemantics: excludeFromSemantics,
       theme: theme,
-      colorFilter: ColorFilter.mode(color!, BlendMode.srcIn),
+      colorFilter: ColorFilter.mode(color!, BlendMode.srcIn) ,
       clipBehavior: clipBehavior,
     );
   }
