@@ -74,6 +74,15 @@ class $AssetsPngImagesGen {
   final AssetGenImage silhouetteWomanReadingQuran = const AssetGenImage(
     'assets/images/png_images/silhouette-woman-reading-quran.jpg',
   );
+  final AssetGenImage splashBranding = const AssetGenImage(
+    'assets/images/png_images/splash_branding.png',
+  );
+  final AssetGenImage splashImage = const AssetGenImage(
+    'assets/images/png_images/splash_image.png',
+  );
+  final AssetGenImage splashImageAndroid12 = const AssetGenImage(
+    'assets/images/png_images/splash_image_android12.png',
+  );
   final AssetGenImage tajMahalAgraIndia = const AssetGenImage(
     'assets/images/png_images/taj-mahal-agra-india.jpg',
   );
