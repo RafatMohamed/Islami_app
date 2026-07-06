@@ -4,7 +4,7 @@ import 'package:islami_app/features/bottom_navigation_bar/widgets/bottom_nav_bar
 
 class MainAppView extends StatefulWidget {
   const MainAppView({super.key});
-  static const String routeName = AppText.routeHomeApp;
+  static const String routeName ="/${AppText.routeMainApp}";
 
   @override
   State<MainAppView> createState() => _MainAppViewState();
