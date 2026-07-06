@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../core/resources_app.dart';
 import '../../../generated/assets.dart';
-import '../../home/view/home_app_view.dart';
+import '../../main_app_view/view/main_app_view.dart';
 
 class BodySplashView extends StatefulWidget {
   const BodySplashView({super.key});
@@ -150,7 +150,7 @@ class _BodySplashViewState extends State<BodySplashView>
   Future<void> goToHome() async {
     return await Future.delayed(const Duration(seconds: 5), () async {
       if (!mounted) return;
-      await Navigator.pushReplacementNamed(context, HomeAppView.routeName);
+      await Navigator.pushReplacementNamed(context, MainAppView.routeName);
     });
   }
 }
