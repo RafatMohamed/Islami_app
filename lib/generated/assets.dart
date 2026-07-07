@@ -49,24 +49,30 @@ class $AssetsPngImagesGen {
   final AssetGenImage background = const AssetGenImage(
     'assets/images/png_images/background.png',
   );
-  final AssetGenImage bearish = const AssetGenImage(
-    'assets/images/png_images/bearish.png',
-  );
   final AssetGenImage closeUpIslamicNewYearWithQuranBooks = const AssetGenImage(
     'assets/images/png_images/close-up-islamic-new-year-with-quran-books.jpg',
-  );
-  final AssetGenImage kabba = const AssetGenImage(
-    'assets/images/png_images/kabba.png',
   );
   final AssetGenImage
   moonLightShineThroughWindowIntoIslamicMosqueInterior = const AssetGenImage(
     'assets/images/png_images/moon-light-shine-through-window-into-islamic-mosque-interior.jpg',
   );
+  final AssetGenImage onBoarding1 = const AssetGenImage(
+    'assets/images/png_images/onBoarding1.png',
+  );
+  final AssetGenImage onBoarding2 = const AssetGenImage(
+    'assets/images/png_images/onBoarding2.png',
+  );
+  final AssetGenImage onBoarding3 = const AssetGenImage(
+    'assets/images/png_images/onBoarding3.png',
+  );
+  final AssetGenImage onBoarding4 = const AssetGenImage(
+    'assets/images/png_images/onBoarding4.png',
+  );
+  final AssetGenImage onBoarding5 = const AssetGenImage(
+    'assets/images/png_images/onBoarding5.png',
+  );
   final AssetGenImage quranSura = const AssetGenImage(
     'assets/images/png_images/quranSura.png',
-  );
-  final AssetGenImage radio = const AssetGenImage(
-    'assets/images/png_images/radio.png',
   );
   final AssetGenImage reading = const AssetGenImage(
     'assets/images/png_images/reading.png',
@@ -89,9 +95,6 @@ class $AssetsPngImagesGen {
   final AssetGenImage
   verticalShotHassanIiMosqueCasablancaMorocco = const AssetGenImage(
     'assets/images/png_images/vertical-shot-hassan-ii-mosque-casablanca-morocco.jpg',
-  );
-  final AssetGenImage welcome = const AssetGenImage(
-    'assets/images/png_images/welcome.png',
   );
 }
 
@@ -224,8 +227,10 @@ class SvgGenImage {
       semanticsLabel: semanticsLabel,
       excludeFromSemantics: excludeFromSemantics,
       theme: theme,
-      colorFilter: ColorFilter.mode(color!, BlendMode.srcIn),
+      color: color,
+      colorBlendMode: colorBlendMode,
       clipBehavior: clipBehavior,
+      cacheColorFilter: cacheColorFilter,
     );
   }
 

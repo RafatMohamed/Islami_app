@@ -38,11 +38,30 @@ class AppTextStyle {
       color: AppColor.whiteColor,
       fontWeight: FontWeight.bold
   );
+  static const TextStyle textLabelOnBoardingStyle = TextStyle(
+      fontFamily: "Janna",
+      fontSize: 24,
+      color: AppColor.goldColor,
+      fontWeight: FontWeight.bold
+  );
+  static const TextStyle textDescOnBoardingStyle = TextStyle(
+      fontFamily: "Janna",
+      fontSize: 20,
+      color: AppColor.goldColor,
+      fontWeight: FontWeight.bold
+  );
+  static const TextStyle textS16Style = TextStyle(
+      fontFamily: "Janna",
+      fontSize: 16,
+      color: AppColor.goldColor,
+      fontWeight: FontWeight.bold
+  );
 }
 
 class AppText{
   static const String appName = "Islami";
-  static const String routeHomeApp = "/homeApp";
+  static const String routeMainApp = "MainApp";
+  static const String routeOnBoardingApp = "onBoarding";
 
 
   static const String quran = "Quran";
@@ -50,6 +69,24 @@ class AppText{
   static const String sebha = "Sebha";
   static const String radio = "Radio";
   static const String time = "Time";
+
+
+  static const String label12ONBoarding = "Welcome To Islami App";
+  static const String label3ONBoarding = "Reading the Quran";
+  static const String label4ONBoarding = "Bearish";
+  static const String label5ONBoarding = "Holy Quran Radio";
+
+  static const String desc2ONBoarding = "We Are Very Excited To Have You In Our Community";
+  static const String desc3ONBoarding = "Read, and your Lord is the Most Generous";
+  static const String desc4ONBoarding = "Praise the name of your Lord, the Most High";
+  static const String desc5ONBoarding = "You can listen to the Holy Quran Radio through the application for free and easily";
+
+
+  static const String next = "Next";
+  static const String back = "back";
+  static const String skip = "Skip";
+  static const String finish = "Finish";
+
 }
 
 class AppPadding{

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:islami_app/core/shared/shared_pref_hive.dart';
+import 'package:islami_app/features/main_app_view/view/main_app_view.dart';
+import 'package:islami_app/features/on_boarding/view/on_boarding_view.dart';
 import '../../../core/resources_app.dart';
 import '../../../generated/assets.dart';
-import '../../main_app_view/view/main_app_view.dart';
 
 class BodySplashView extends StatefulWidget {
   const BodySplashView({super.key});
@@ -124,7 +126,7 @@ class _BodySplashViewState extends State<BodySplashView>
                   width: size.width * .5,
                 ),
                 const SizedBox(height: 16),
-                const Text("Islami", style: AppTextStyle.textSplashStyle),
+                const Text(AppText.appName, style: AppTextStyle.textSplashStyle),
               ],
             ),
           ),
@@ -150,7 +152,11 @@ class _BodySplashViewState extends State<BodySplashView>
   Future<void> goToHome() async {
     return await Future.delayed(const Duration(seconds: 5), () async {
       if (!mounted) return;
-      await Navigator.pushReplacementNamed(context, MainAppView.routeName);
+      if(SharedPrefHiveImp.instance.getObj()){
+        await Navigator.pushReplacementNamed(context, MainAppView.routeName);
+      }else{
+        await Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
+      }
     });
   }
 }
