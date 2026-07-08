@@ -49,6 +49,21 @@ class $AssetsPngImagesGen {
   final AssetGenImage background = const AssetGenImage(
     'assets/images/png_images/background.png',
   );
+  final AssetGenImage backgroundHadeth = const AssetGenImage(
+    'assets/images/png_images/background_hadeth.png',
+  );
+  final AssetGenImage backgroundQuran = const AssetGenImage(
+    'assets/images/png_images/background_quran.png',
+  );
+  final AssetGenImage backgroundRadio = const AssetGenImage(
+    'assets/images/png_images/background_radio.png',
+  );
+  final AssetGenImage backgroundSebha = const AssetGenImage(
+    'assets/images/png_images/background_sebha.png',
+  );
+  final AssetGenImage backgroundTime = const AssetGenImage(
+    'assets/images/png_images/background_time.png',
+  );
   final AssetGenImage closeUpIslamicNewYearWithQuranBooks = const AssetGenImage(
     'assets/images/png_images/close-up-islamic-new-year-with-quran-books.jpg',
   );
@@ -102,6 +117,9 @@ class $AssetsIconsGen {
   const $AssetsIconsGen();
 
   final SvgGenImage hadeth = const SvgGenImage('assets/icons/hadeth.svg');
+  final SvgGenImage iconNumSura = const SvgGenImage(
+    'assets/icons/icon_num_sura.svg',
+  );
   final SvgGenImage quran = const SvgGenImage('assets/icons/quran.svg');
   final SvgGenImage radio = const SvgGenImage('assets/icons/radio.svg');
   final SvgGenImage sebha = const SvgGenImage('assets/icons/sebha.svg');
