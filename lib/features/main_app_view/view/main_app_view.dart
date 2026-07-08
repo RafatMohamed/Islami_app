@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami_app/core/models/view_model_tabs.dart';
 import 'package:islami_app/core/resources_app.dart';
 import 'package:islami_app/features/bottom_navigation_bar/widgets/bottom_nav_bar_widget.dart';
 
@@ -12,6 +13,9 @@ class MainAppView extends StatefulWidget {
 
 class _MainAppViewState extends State<MainAppView> {
   int currentIndex = 0;
+  List<ViewModelTabs> tabsView=[
+
+  ];
   @override
   Widget build(BuildContext context) {
     return Stack(
