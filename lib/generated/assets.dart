@@ -67,6 +67,12 @@ class $AssetsPngImagesGen {
   final AssetGenImage closeUpIslamicNewYearWithQuranBooks = const AssetGenImage(
     'assets/images/png_images/close-up-islamic-new-year-with-quran-books.jpg',
   );
+  final AssetGenImage imgLeftCornerHome = const AssetGenImage(
+    'assets/images/png_images/img_left_corner_home.png',
+  );
+  final AssetGenImage imgRightCornerDetails = const AssetGenImage(
+    'assets/images/png_images/img_right_corner_details.png',
+  );
   final AssetGenImage
   moonLightShineThroughWindowIntoIslamicMosqueInterior = const AssetGenImage(
     'assets/images/png_images/moon-light-shine-through-window-into-islamic-mosque-interior.jpg',
