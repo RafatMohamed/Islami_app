@@ -9,6 +9,8 @@ import 'package:islami_app/features/radio_view/view/radio_view.dart';
 import 'package:islami_app/features/sebha_view/view/sebha_view.dart';
 import 'package:islami_app/features/time_view/view/time_view.dart';
 
+import '../widgets/custom_body_main_app.dart';
+
 class MainAppView extends StatefulWidget {
   const MainAppView({super.key});
   static const String routeName = "/${AppText.routeMainApp}";
@@ -31,25 +33,10 @@ class _MainAppViewState extends State<MainAppView> {
     final Size size = MediaQuery.sizeOf(context);
     return Scaffold(
       body: Stack(
-        alignment: AlignmentGeometry.topCenter,
+        alignment: .topStart,
         fit: .expand,
         children: [
-          Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                fit: .fill,
-                image: AssetImage(
-                  "assets/images/png_images/background_${tabsView[currentIndex].backGroundImagePath}.png",
-                ),
-              ),
-            ),
-            child: Column(
-              children: [
-                const CustomAppBarAppText(),
-                Expanded(child: tabsView[currentIndex].tabs),
-              ],
-            ),
-          ),
+          CustomBodyMainApp(tabsView: tabsView, currentIndex: currentIndex),
           Positioned(
             bottom: AppPadding.p20,
             right: AppPadding.p16,
@@ -68,3 +55,4 @@ class _MainAppViewState extends State<MainAppView> {
     );
   }
 }
+

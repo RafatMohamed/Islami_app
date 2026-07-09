@@ -31,7 +31,7 @@ class CustomBodyInfoOnBoarding extends StatelessWidget {
           child: Text(
             item.desc!,
             textAlign: TextAlign.center,
-            style: AppTextStyle.textDescOnBoardingStyle,
+            style: AppTextStyle.textS20Style,
           ),
         ),
       ],

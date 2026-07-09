@@ -44,7 +44,7 @@ class AppTextStyle {
       color: AppColor.goldColor,
       fontWeight: FontWeight.bold
   );
-  static const TextStyle textDescOnBoardingStyle = TextStyle(
+  static const TextStyle textS20Style = TextStyle(
       fontFamily: "Janna",
       fontSize: 20,
       color: AppColor.goldColor,
@@ -53,6 +53,12 @@ class AppTextStyle {
   static const TextStyle textS16Style = TextStyle(
       fontFamily: "Janna",
       fontSize: 16,
+      color: AppColor.goldColor,
+      fontWeight: FontWeight.bold
+  );
+  static const TextStyle textS14Style = TextStyle(
+      fontFamily: "Janna",
+      fontSize: 14,
       color: AppColor.goldColor,
       fontWeight: FontWeight.bold
   );
@@ -86,12 +92,14 @@ class AppText{
   static const String back = "back";
   static const String skip = "Skip";
   static const String finish = "Finish";
+  static const String suraList = "Suras List";
 
 }
 
 class AppPadding{
   static const double p4=4.0;
   static const double p8=8.0;
+  static const double p10=10.0;
   static const double p16=16.0;
   static const double p20=20.0;
   static const double p24=24.0;
