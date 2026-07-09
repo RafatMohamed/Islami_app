@@ -5,6 +5,7 @@ import 'package:islami_app/features/quran_view/model/sura_info_model.dart';
 import 'package:islami_app/features/quran_view/view/widget/custom_build_suras_view.dart';
 
 class QuranView extends StatelessWidget {
+  static const String routeName = "/${AppText.quranViewApp}";
   const QuranView({super.key});
 
   @override

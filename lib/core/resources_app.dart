@@ -68,6 +68,12 @@ class AppText{
   static const String appName = "Islami";
   static const String routeMainApp = "MainApp";
   static const String routeOnBoardingApp = "onBoarding";
+  static const String quranViewApp = "quranViewApp";
+  static const String hadethViewApp = "hadethViewApp";
+  static const String sebhaViewApp = "sebhaViewApp";
+  static const String radioViewApp = "radioViewApp";
+  static const String timeViewApp = "timeViewApp";
+  static const String suraDetailsViewApp = "suraDetailsViewApp";
 
 
   static const String quran = "Quran";

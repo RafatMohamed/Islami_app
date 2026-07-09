@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami_app/core/resources_app.dart';
 
 class SebhaView extends StatelessWidget {
+  static const String routeName = "/${AppText.sebhaViewApp}";
   const SebhaView({super.key});
 
   @override

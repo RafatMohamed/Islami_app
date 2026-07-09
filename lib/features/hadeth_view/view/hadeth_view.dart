@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami_app/core/resources_app.dart';
 
 class HadethView extends StatelessWidget {
+  static const String routeName = "/${AppText.hadethViewApp}";
   const HadethView({super.key});
 
   @override
