@@ -74,6 +74,9 @@ class $AssetsPngImagesGen {
   final AssetGenImage imgRightCornerDetails = const AssetGenImage(
     'assets/images/png_images/img_right_corner_details.png',
   );
+  final AssetGenImage leftCornerHadeth = const AssetGenImage(
+    'assets/images/png_images/left_corner_hadeth.png',
+  );
   final AssetGenImage
   moonLightShineThroughWindowIntoIslamicMosqueInterior = const AssetGenImage(
     'assets/images/png_images/moon-light-shine-through-window-into-islamic-mosque-interior.jpg',
@@ -98,6 +101,9 @@ class $AssetsPngImagesGen {
   );
   final AssetGenImage reading = const AssetGenImage(
     'assets/images/png_images/reading.png',
+  );
+  final AssetGenImage rightCornerHadeth = const AssetGenImage(
+    'assets/images/png_images/right_corner_hadeth.png',
   );
   final AssetGenImage silhouetteWomanReadingQuran = const AssetGenImage(
     'assets/images/png_images/silhouette-woman-reading-quran.jpg',
@@ -139,7 +145,6 @@ class $AssetsTextGen {
   final $AssetsHadeethGen hadeeth = const $AssetsHadeethGen();
   final $AssetsSurasGen suras = const $AssetsSurasGen();
 }
-
 
 
 class $AssetsHadeethGen {
