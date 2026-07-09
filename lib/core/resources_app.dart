@@ -7,6 +7,14 @@ class AppThem{
 
   static final ThemeData darkTheme =ThemeData(
     primaryColor: AppColor.blackColor,
+    appBarTheme:  const AppBarTheme(
+      centerTitle: true,
+      backgroundColor:Colors.transparent,
+      iconTheme: IconThemeData(
+        color: AppColor.goldColor,
+      ),
+      titleTextStyle: AppTextStyle.textS20Style,
+    ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: AppColor.goldColor,
       showUnselectedLabels: false,
@@ -38,13 +46,13 @@ class AppTextStyle {
       color: AppColor.whiteColor,
       fontWeight: FontWeight.bold
   );
-  static const TextStyle textLabelOnBoardingStyle = TextStyle(
+  static const TextStyle textS24Style = TextStyle(
       fontFamily: "Janna",
       fontSize: 24,
       color: AppColor.goldColor,
       fontWeight: FontWeight.bold
   );
-  static const TextStyle textDescOnBoardingStyle = TextStyle(
+  static const TextStyle textS20Style = TextStyle(
       fontFamily: "Janna",
       fontSize: 20,
       color: AppColor.goldColor,
@@ -56,12 +64,24 @@ class AppTextStyle {
       color: AppColor.goldColor,
       fontWeight: FontWeight.bold
   );
+  static const TextStyle textS14Style = TextStyle(
+      fontFamily: "Janna",
+      fontSize: 14,
+      color: AppColor.goldColor,
+      fontWeight: FontWeight.bold
+  );
 }
 
 class AppText{
   static const String appName = "Islami";
   static const String routeMainApp = "MainApp";
   static const String routeOnBoardingApp = "onBoarding";
+  static const String quranViewApp = "quranViewApp";
+  static const String hadethViewApp = "hadethViewApp";
+  static const String sebhaViewApp = "sebhaViewApp";
+  static const String radioViewApp = "radioViewApp";
+  static const String timeViewApp = "timeViewApp";
+  static const String suraDetailsViewApp = "suraDetailsViewApp";
 
 
   static const String quran = "Quran";
@@ -86,12 +106,14 @@ class AppText{
   static const String back = "back";
   static const String skip = "Skip";
   static const String finish = "Finish";
+  static const String suraList = "Suras List";
 
 }
 
 class AppPadding{
   static const double p4=4.0;
   static const double p8=8.0;
+  static const double p10=10.0;
   static const double p16=16.0;
   static const double p20=20.0;
   static const double p24=24.0;
