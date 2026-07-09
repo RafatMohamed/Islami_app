@@ -24,14 +24,14 @@ class CustomBodyInfoOnBoarding extends StatelessWidget {
         ),
         Text(
           item.label,
-          style: AppTextStyle.textLabelOnBoardingStyle,
+          style: AppTextStyle.textS24Style,
         ),
         Visibility(
           visible: item.desc!.isNotEmpty,
           child: Text(
             item.desc!,
             textAlign: TextAlign.center,
-            style: AppTextStyle.textDescOnBoardingStyle,
+            style: AppTextStyle.textS20Style,
           ),
         ),
       ],

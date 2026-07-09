@@ -3,7 +3,7 @@ import 'package:islami_app/core/resources_app.dart';
 import 'package:islami_app/features/main_app_view/view/main_app_view.dart';
 import 'package:islami_app/features/on_boarding/model/on_boarding_model.dart';
 import '../../../core/shared/shared_pref_hive.dart';
-import 'custom_app_bar_on_boarding.dart';
+import '../../../core/widgets/custom_app_bar_on_boarding.dart';
 import 'custom_bottom_action_on_boarding.dart';
 import 'custom_info_view_body_on_board.dart';
 import 'custom_text_action_on_boarding.dart';
@@ -66,7 +66,7 @@ class _BodyOnBoardingViewState extends State<BodyOnBoardingView> {
       children: [
         Column(
           children: [
-            const Expanded(child: CustomAppBarOnBoarding()),
+            const Expanded(child: CustomAppBarAppText()),
 
             Expanded(
               flex: 3,
