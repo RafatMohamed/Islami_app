@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/core/resources_app.dart';
 import 'package:islami_app/features/quran_view/view/quran_view.dart';
-import 'package:islami_app/features/soura_detailes_view/view/widget.dart';
+import 'package:islami_app/features/soura_detailes_view/view/sura_details_view.dart';
 import 'package:islami_app/features/splash/view/splash_view.dart';
 import '../features/hadeth_view/view/hadeth_view.dart';
 import '../features/main_app_view/view/main_app_view.dart';

@@ -8,6 +8,7 @@ class Assets {
 
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsTextGen text = $AssetsTextGen();
 }
 
 class $AssetsImagesGen {
@@ -130,6 +131,189 @@ class $AssetsIconsGen {
   final SvgGenImage radio = const SvgGenImage('assets/icons/radio.svg');
   final SvgGenImage sebha = const SvgGenImage('assets/icons/sebha.svg');
   final SvgGenImage time = const SvgGenImage('assets/icons/time.svg');
+}
+
+class $AssetsTextGen {
+  const $AssetsTextGen();
+
+  final $AssetsHadeethGen hadeeth = const $AssetsHadeethGen();
+  final $AssetsSurasGen suras = const $AssetsSurasGen();
+}
+
+
+
+class $AssetsHadeethGen {
+  const $AssetsHadeethGen();
+
+  final String h1 = 'assets/text/Hadeeth/Hadeeth/h1.txt';
+  final String h10 = 'assets/text/Hadeeth/Hadeeth/h10.txt';
+  final String h11 = 'assets/text/Hadeeth/Hadeeth/h11.txt';
+  final String h12 = 'assets/text/Hadeeth/Hadeeth/h12.txt';
+  final String h13 = 'assets/text/Hadeeth/Hadeeth/h13.txt';
+  final String h14 = 'assets/text/Hadeeth/Hadeeth/h14.txt';
+  final String h15 = 'assets/text/Hadeeth/Hadeeth/h15.txt';
+  final String h16 = 'assets/text/Hadeeth/Hadeeth/h16.txt';
+  final String h17 = 'assets/text/Hadeeth/Hadeeth/h17.txt';
+  final String h18 = 'assets/text/Hadeeth/Hadeeth/h18.txt';
+  final String h19 = 'assets/text/Hadeeth/Hadeeth/h19.txt';
+  final String h2 = 'assets/text/Hadeeth/Hadeeth/h2.txt';
+  final String h20 = 'assets/text/Hadeeth/Hadeeth/h20.txt';
+  final String h21 = 'assets/text/Hadeeth/Hadeeth/h21.txt';
+  final String h22 = 'assets/text/Hadeeth/Hadeeth/h22.txt';
+  final String h23 = 'assets/text/Hadeeth/Hadeeth/h23.txt';
+  final String h24 = 'assets/text/Hadeeth/Hadeeth/h24.txt';
+  final String h25 = 'assets/text/Hadeeth/Hadeeth/h25.txt';
+  final String h26 = 'assets/text/Hadeeth/Hadeeth/h26.txt';
+  final String h27 = 'assets/text/Hadeeth/Hadeeth/h27.txt';
+  final String h28 = 'assets/text/Hadeeth/Hadeeth/h28.txt';
+  final String h29 = 'assets/text/Hadeeth/Hadeeth/h29.txt';
+  final String h3 = 'assets/text/Hadeeth/Hadeeth/h3.txt';
+  final String h30 = 'assets/text/Hadeeth/Hadeeth/h30.txt';
+  final String h31 = 'assets/text/Hadeeth/Hadeeth/h31.txt';
+  final String h32 = 'assets/text/Hadeeth/Hadeeth/h32.txt';
+  final String h33 = 'assets/text/Hadeeth/Hadeeth/h33.txt';
+  final String h34 = 'assets/text/Hadeeth/Hadeeth/h34.txt';
+  final String h35 = 'assets/text/Hadeeth/Hadeeth/h35.txt';
+  final String h36 = 'assets/text/Hadeeth/Hadeeth/h36.txt';
+  final String h37 = 'assets/text/Hadeeth/Hadeeth/h37.txt';
+  final String h38 = 'assets/text/Hadeeth/Hadeeth/h38.txt';
+  final String h39 = 'assets/text/Hadeeth/Hadeeth/h39.txt';
+  final String h4 = 'assets/text/Hadeeth/Hadeeth/h4.txt';
+  final String h40 = 'assets/text/Hadeeth/Hadeeth/h40.txt';
+  final String h41 = 'assets/text/Hadeeth/Hadeeth/h41.txt';
+  final String h42 = 'assets/text/Hadeeth/Hadeeth/h42.txt';
+  final String h43 = 'assets/text/Hadeeth/Hadeeth/h43.txt';
+  final String h44 = 'assets/text/Hadeeth/Hadeeth/h44.txt';
+  final String h45 = 'assets/text/Hadeeth/Hadeeth/h45.txt';
+  final String h46 = 'assets/text/Hadeeth/Hadeeth/h46.txt';
+  final String h47 = 'assets/text/Hadeeth/Hadeeth/h47.txt';
+  final String h48 = 'assets/text/Hadeeth/Hadeeth/h48.txt';
+  final String h49 = 'assets/text/Hadeeth/Hadeeth/h49.txt';
+  final String h5 = 'assets/text/Hadeeth/Hadeeth/h5.txt';
+  final String h50 = 'assets/text/Hadeeth/Hadeeth/h50.txt';
+  final String h6 = 'assets/text/Hadeeth/Hadeeth/h6.txt';
+  final String h7 = 'assets/text/Hadeeth/Hadeeth/h7.txt';
+  final String h8 = 'assets/text/Hadeeth/Hadeeth/h8.txt';
+  final String h9 = 'assets/text/Hadeeth/Hadeeth/h9.txt';
+}
+
+class $AssetsSurasGen {
+  const $AssetsSurasGen();
+
+  final String a1 = 'assets/text/Suras/Suras/1.txt';
+  final String a10 = 'assets/text/Suras/Suras/10.txt';
+  final String a100 = 'assets/text/Suras/Suras/100.txt';
+  final String a101 = 'assets/text/Suras/Suras/101.txt';
+  final String a102 = 'assets/text/Suras/Suras/102.txt';
+  final String a103 = 'assets/text/Suras/Suras/103.txt';
+  final String a104 = 'assets/text/Suras/Suras/104.txt';
+  final String a105 = 'assets/text/Suras/Suras/105.txt';
+  final String a106 = 'assets/text/Suras/Suras/106.txt';
+  final String a107 = 'assets/text/Suras/Suras/107.txt';
+  final String a108 = 'assets/text/Suras/Suras/108.txt';
+  final String a109 = 'assets/text/Suras/Suras/109.txt';
+  final String a11 = 'assets/text/Suras/Suras/11.txt';
+  final String a110 = 'assets/text/Suras/Suras/110.txt';
+  final String a111 = 'assets/text/Suras/Suras/111.txt';
+  final String a112 = 'assets/text/Suras/Suras/112.txt';
+  final String a113 = 'assets/text/Suras/Suras/113.txt';
+  final String a114 = 'assets/text/Suras/Suras/114.txt';
+  final String a12 = 'assets/text/Suras/Suras/12.txt';
+  final String a13 = 'assets/text/Suras/Suras/13.txt';
+  final String a14 = 'assets/text/Suras/Suras/14.txt';
+  final String a15 = 'assets/text/Suras/Suras/15.txt';
+  final String a16 = 'assets/text/Suras/Suras/16.txt';
+  final String a17 = 'assets/text/Suras/Suras/17.txt';
+  final String a18 = 'assets/text/Suras/Suras/18.txt';
+  final String a19 = 'assets/text/Suras/Suras/19.txt';
+  final String a2 = 'assets/text/Suras/Suras/2.txt';
+  final String a20 = 'assets/text/Suras/Suras/20.txt';
+  final String a21 = 'assets/text/Suras/Suras/21.txt';
+  final String a22 = 'assets/text/Suras/Suras/22.txt';
+  final String a23 = 'assets/text/Suras/Suras/23.txt';
+  final String a24 = 'assets/text/Suras/Suras/24.txt';
+  final String a25 = 'assets/text/Suras/Suras/25.txt';
+  final String a26 = 'assets/text/Suras/Suras/26.txt';
+  final String a27 = 'assets/text/Suras/Suras/27.txt';
+  final String a28 = 'assets/text/Suras/Suras/28.txt';
+  final String a29 = 'assets/text/Suras/Suras/29.txt';
+  final String a3 = 'assets/text/Suras/Suras/3.txt';
+  final String a30 = 'assets/text/Suras/Suras/30.txt';
+  final String a31 = 'assets/text/Suras/Suras/31.txt';
+  final String a32 = 'assets/text/Suras/Suras/32.txt';
+  final String a33 = 'assets/text/Suras/Suras/33.txt';
+  final String a34 = 'assets/text/Suras/Suras/34.txt';
+  final String a35 = 'assets/text/Suras/Suras/35.txt';
+  final String a36 = 'assets/text/Suras/Suras/36.txt';
+  final String a37 = 'assets/text/Suras/Suras/37.txt';
+  final String a38 = 'assets/text/Suras/Suras/38.txt';
+  final String a39 = 'assets/text/Suras/Suras/39.txt';
+  final String a4 = 'assets/text/Suras/Suras/4.txt';
+  final String a40 = 'assets/text/Suras/Suras/40.txt';
+  final String a41 = 'assets/text/Suras/Suras/41.txt';
+  final String a42 = 'assets/text/Suras/Suras/42.txt';
+  final String a43 = 'assets/text/Suras/Suras/43.txt';
+  final String a44 = 'assets/text/Suras/Suras/44.txt';
+  final String a45 = 'assets/text/Suras/Suras/45.txt';
+  final String a46 = 'assets/text/Suras/Suras/46.txt';
+  final String a47 = 'assets/text/Suras/Suras/47.txt';
+  final String a48 = 'assets/text/Suras/Suras/48.txt';
+  final String a49 = 'assets/text/Suras/Suras/49.txt';
+  final String a5 = 'assets/text/Suras/Suras/5.txt';
+  final String a50 = 'assets/text/Suras/Suras/50.txt';
+  final String a51 = 'assets/text/Suras/Suras/51.txt';
+  final String a52 = 'assets/text/Suras/Suras/52.txt';
+  final String a53 = 'assets/text/Suras/Suras/53.txt';
+  final String a54 = 'assets/text/Suras/Suras/54.txt';
+  final String a55 = 'assets/text/Suras/Suras/55.txt';
+  final String a56 = 'assets/text/Suras/Suras/56.txt';
+  final String a57 = 'assets/text/Suras/Suras/57.txt';
+  final String a58 = 'assets/text/Suras/Suras/58.txt';
+  final String a59 = 'assets/text/Suras/Suras/59.txt';
+  final String a6 = 'assets/text/Suras/Suras/6.txt';
+  final String a60 = 'assets/text/Suras/Suras/60.txt';
+  final String a61 = 'assets/text/Suras/Suras/61.txt';
+  final String a62 = 'assets/text/Suras/Suras/62.txt';
+  final String a63 = 'assets/text/Suras/Suras/63.txt';
+  final String a64 = 'assets/text/Suras/Suras/64.txt';
+  final String a65 = 'assets/text/Suras/Suras/65.txt';
+  final String a66 = 'assets/text/Suras/Suras/66.txt';
+  final String a67 = 'assets/text/Suras/Suras/67.txt';
+  final String a68 = 'assets/text/Suras/Suras/68.txt';
+  final String a69 = 'assets/text/Suras/Suras/69.txt';
+  final String a7 = 'assets/text/Suras/Suras/7.txt';
+  final String a70 = 'assets/text/Suras/Suras/70.txt';
+  final String a71 = 'assets/text/Suras/Suras/71.txt';
+  final String a72 = 'assets/text/Suras/Suras/72.txt';
+  final String a73 = 'assets/text/Suras/Suras/73.txt';
+  final String a74 = 'assets/text/Suras/Suras/74.txt';
+  final String a75 = 'assets/text/Suras/Suras/75.txt';
+  final String a76 = 'assets/text/Suras/Suras/76.txt';
+  final String a77 = 'assets/text/Suras/Suras/77.txt';
+  final String a78 = 'assets/text/Suras/Suras/78.txt';
+  final String a79 = 'assets/text/Suras/Suras/79.txt';
+  final String a8 = 'assets/text/Suras/Suras/8.txt';
+  final String a80 = 'assets/text/Suras/Suras/80.txt';
+  final String a81 = 'assets/text/Suras/Suras/81.txt';
+  final String a82 = 'assets/text/Suras/Suras/82.txt';
+  final String a83 = 'assets/text/Suras/Suras/83.txt';
+  final String a84 = 'assets/text/Suras/Suras/84.txt';
+  final String a85 = 'assets/text/Suras/Suras/85.txt';
+  final String a86 = 'assets/text/Suras/Suras/86.txt';
+  final String a87 = 'assets/text/Suras/Suras/87.txt';
+  final String a88 = 'assets/text/Suras/Suras/88.txt';
+  final String a89 = 'assets/text/Suras/Suras/89.txt';
+  final String a9 = 'assets/text/Suras/Suras/9.txt';
+  final String a90 = 'assets/text/Suras/Suras/90.txt';
+  final String a91 = 'assets/text/Suras/Suras/91.txt';
+  final String a92 = 'assets/text/Suras/Suras/92.txt';
+  final String a93 = 'assets/text/Suras/Suras/93.txt';
+  final String a94 = 'assets/text/Suras/Suras/94.txt';
+  final String a95 = 'assets/text/Suras/Suras/95.txt';
+  final String a96 = 'assets/text/Suras/Suras/96.txt';
+  final String a97 = 'assets/text/Suras/Suras/97.txt';
+  final String a98 = 'assets/text/Suras/Suras/98.txt';
+  final String a99 = 'assets/text/Suras/Suras/99.txt';
 }
 
 class AssetGenImage {

@@ -7,6 +7,14 @@ class AppThem{
 
   static final ThemeData darkTheme =ThemeData(
     primaryColor: AppColor.blackColor,
+    appBarTheme:  const AppBarTheme(
+      centerTitle: true,
+      backgroundColor:Colors.transparent,
+      iconTheme: IconThemeData(
+        color: AppColor.goldColor,
+      ),
+      titleTextStyle: AppTextStyle.textS20Style,
+    ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: AppColor.goldColor,
       showUnselectedLabels: false,
@@ -38,7 +46,7 @@ class AppTextStyle {
       color: AppColor.whiteColor,
       fontWeight: FontWeight.bold
   );
-  static const TextStyle textLabelOnBoardingStyle = TextStyle(
+  static const TextStyle textS24Style = TextStyle(
       fontFamily: "Janna",
       fontSize: 24,
       color: AppColor.goldColor,

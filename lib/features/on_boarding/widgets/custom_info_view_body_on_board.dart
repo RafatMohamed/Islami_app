@@ -24,7 +24,7 @@ class CustomBodyInfoOnBoarding extends StatelessWidget {
         ),
         Text(
           item.label,
-          style: AppTextStyle.textLabelOnBoardingStyle,
+          style: AppTextStyle.textS24Style,
         ),
         Visibility(
           visible: item.desc!.isNotEmpty,

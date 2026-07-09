@@ -1,8 +1,10 @@
+import 'package:flutter/services.dart';
 import 'package:islami_app/core/service/service.dart';
 import 'package:islami_app/features/quran_view/model/sura_info_model.dart';
+import 'package:islami_app/generated/assets.dart';
 
-class QuranService{
- static List<String> _suraNameAr = [
+class QuranService {
+  static List<String> _suraNameAr = [
     "الفاتحه",
     "البقرة",
     "آل عمران",
@@ -116,9 +118,9 @@ class QuranService{
     "المسد",
     "الإخلاص",
     "الفلق",
-    "الناس"
+    "الناس",
   ];
- static List<String> _suraNameEn = [
+  static List<String> _suraNameEn = [
     "Al-Fatiha",
     "Al-Baqarah",
     "Aal-E-Imran",
@@ -232,9 +234,9 @@ class QuranService{
     "Al-Masad",
     "Al-Ikhlas",
     "Al-Falaq",
-    "An-Nas"
+    "An-Nas",
   ];
- static  List<int> _suraNumVerse = [
+  static List<int> _suraNumVerse = [
     7,
     286,
     200,
@@ -351,11 +353,21 @@ class QuranService{
     6,
   ];
 
- static  int getNumbersSura() {
-   return _suraNameAr.length;
- }
+  static int getNumbersSura() {
+    return _suraNameAr.length;
+  }
 
-static  SuraInfoModel getData(int index) {
-    return SuraInfoModel(nameAr: _suraNameAr[index], nameEN: _suraNameEn[index], numberSura: index+1, numVerse: _suraNumVerse[index]);
+  static SuraInfoModel getData(int index) {
+    return SuraInfoModel(
+      nameAr: _suraNameAr[index],
+      nameEN: _suraNameEn[index],
+      numberSura: index + 1,
+      numVerse: _suraNumVerse[index],
+    );
+  }
+
+  static Future<List<String>> readData(int index)async{
+     final data = await rootBundle.loadString("assets/text/Suras/Suras/$index.txt");
+    return data.split("\n");
   }
 }
