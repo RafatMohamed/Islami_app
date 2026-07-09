@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:islami_app/core/resources_app.dart';
-import 'package:islami_app/core/service/hadeth_service/hadeth_service.dart';
 import 'package:islami_app/features/hadeth_view/model/hadeth_model.dart';
-import 'package:islami_app/features/soura_detailes_view/view/sura_details_view.dart';
 import 'package:islami_app/generated/assets.dart';
 
 class CustomBuildHadethCardView extends StatelessWidget {

@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:islami_app/core/resources_app.dart';
 import 'package:islami_app/core/service/hadeth_service/hadeth_service.dart';
+import 'package:islami_app/features/hadeth_detailes_view/view/sura_details_view.dart';
 import 'package:islami_app/features/hadeth_view/model/hadeth_model.dart';
 import 'package:islami_app/features/hadeth_view/view/widget/custom_build_hadeth_view.dart';
 
@@ -67,12 +68,19 @@ class _HadethViewState extends State<HadethView> {
                   );
                 }
                 final resultData = snapshot.data;
-                return CustomBuildHadethCardView(
-                  isSelected: isSelected,
-                  hadeth: HadethModel(
-                    title: resultData![0].toString(),
-                    content: resultData[1].toString(),
-                    lastHadeth: resultData[2].toString(),
+                final HadethModel hadeth =  HadethModel(
+                  title: resultData![0].toString(),
+                  content: resultData[1].toString(),
+                  lastHadeth: resultData[2].toString(),
+                  numHadeth: index
+                );
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, HadethDetailsView.routeName,arguments: hadeth);
+                  },
+                  child: CustomBuildHadethCardView(
+                    isSelected: isSelected,
+                    hadeth:hadeth,
                   ),
                 );
               },

@@ -1,10 +1,8 @@
 import 'package:flutter/services.dart';
-import 'package:islami_app/core/service/service.dart';
-import 'package:islami_app/features/quran_view/model/sura_info_model.dart';
-import 'package:islami_app/generated/assets.dart';
+import '../../../features/quran_view/model/sura_info_model.dart';
 
 class QuranService {
-  static List<String> _suraNameAr = [
+  static final List<String> _suraNameAr = [
     "الفاتحه",
     "البقرة",
     "آل عمران",
@@ -120,7 +118,7 @@ class QuranService {
     "الفلق",
     "الناس",
   ];
-  static List<String> _suraNameEn = [
+  static final List<String> _suraNameEn = [
     "Al-Fatiha",
     "Al-Baqarah",
     "Aal-E-Imran",
@@ -236,7 +234,7 @@ class QuranService {
     "Al-Falaq",
     "An-Nas",
   ];
-  static List<int> _suraNumVerse = [
+  static final List<int> _suraNumVerse = [
     7,
     286,
     200,

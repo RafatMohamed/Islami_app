@@ -1,5 +1,4 @@
 import 'package:flutter/services.dart';
-import 'package:islami_app/features/hadeth_view/model/hadeth_model.dart';
 
 class HadethService {
 
