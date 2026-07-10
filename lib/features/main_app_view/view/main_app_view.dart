@@ -42,6 +42,7 @@ class _MainAppViewState extends State<MainAppView> {
             child: BottomNavBarWidget(
               currentIndex: currentIndex,
               selectItemNav: (int index) {
+                FocusScope.of(context).unfocus();
                 setState(() {
                   currentIndex = index;
                 });

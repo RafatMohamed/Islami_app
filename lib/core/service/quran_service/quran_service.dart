@@ -2,7 +2,7 @@ import 'package:flutter/services.dart';
 import '../../../features/quran_view/model/sura_info_model.dart';
 
 class QuranService {
-  static final List<String> _suraNameAr = [
+  static final List<String> suraNameAr = [
     "الفاتحه",
     "البقرة",
     "آل عمران",
@@ -118,7 +118,7 @@ class QuranService {
     "الفلق",
     "الناس",
   ];
-  static final List<String> _suraNameEn = [
+  static final List<String> suraNameEn = [
     "Al-Fatiha",
     "Al-Baqarah",
     "Aal-E-Imran",
@@ -351,14 +351,19 @@ class QuranService {
     6,
   ];
 
+  static  List<SuraInfoModel> allSura =List.generate(
+    getNumbersSura(),
+        (index) {
+    return getData(index);
+  },);
   static int getNumbersSura() {
-    return _suraNameAr.length;
+    return suraNameAr.length;
   }
 
   static SuraInfoModel getData(int index) {
     return SuraInfoModel(
-      nameAr: _suraNameAr[index],
-      nameEN: _suraNameEn[index],
+      nameAr: suraNameAr[index],
+      nameEN: suraNameEn[index],
       numberSura: index + 1,
       numVerse: _suraNumVerse[index],
     );
