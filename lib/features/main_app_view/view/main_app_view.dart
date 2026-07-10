@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/core/models/view_model_tabs.dart';
 import 'package:islami_app/core/resources_app.dart';
-import 'package:islami_app/core/widgets/custom_app_bar_on_boarding.dart';
 import 'package:islami_app/features/bottom_navigation_bar/widgets/bottom_nav_bar_widget.dart';
 import 'package:islami_app/features/hadeth_view/view/hadeth_view.dart';
 import 'package:islami_app/features/quran_view/view/quran_view.dart';
@@ -30,7 +29,6 @@ class _MainAppViewState extends State<MainAppView> {
   ];
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.sizeOf(context);
     return Scaffold(
       body: Stack(
         alignment: .topStart,
@@ -44,6 +42,7 @@ class _MainAppViewState extends State<MainAppView> {
             child: BottomNavBarWidget(
               currentIndex: currentIndex,
               selectItemNav: (int index) {
+                FocusScope.of(context).unfocus();
                 setState(() {
                   currentIndex = index;
                 });

@@ -82,6 +82,7 @@ class AppText{
   static const String radioViewApp = "radioViewApp";
   static const String timeViewApp = "timeViewApp";
   static const String suraDetailsViewApp = "suraDetailsViewApp";
+  static const String hadethDetailsViewApp = "hadethDetailsViewApp";
 
 
   static const String quran = "Quran";
@@ -107,6 +108,8 @@ class AppText{
   static const String skip = "Skip";
   static const String finish = "Finish";
   static const String suraList = "Suras List";
+  static const String suraName = "Sura Name";
+  static const String searchResult = "Search Suras";
 
 }
 

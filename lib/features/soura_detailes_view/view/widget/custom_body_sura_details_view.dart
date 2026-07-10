@@ -18,7 +18,7 @@ class _CustomBodySuraDetailsState extends State<CustomBodySuraDetails> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsGeometry.symmetric(horizontal: AppPadding.p16,vertical: AppPadding.p10),
+      padding: const EdgeInsetsGeometry.symmetric(horizontal: AppPadding.p16,vertical: AppPadding.p10),
       child: Column(
         children: [
           Row(
