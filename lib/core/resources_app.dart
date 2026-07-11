@@ -110,6 +110,7 @@ class AppText{
   static const String suraList = "Suras List";
   static const String suraName = "Sura Name";
   static const String searchResult = "Search Suras";
+  static const String mostResent = "Most Recently";
 
 }
 
@@ -126,6 +127,7 @@ class AppPadding{
 class AppBorderRadius{
   static const double r8=8.0;
   static const double r16=16.0;
+  static const double r20=20.0;
   static const double r24=24.0;
   static const double r32=32.0;
 }
