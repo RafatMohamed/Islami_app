@@ -55,3 +55,53 @@ class CustomBuildSuraQuranView extends StatelessWidget {
     );
   }
 }
+
+class CustomBuildMostResentQuranView extends StatelessWidget {
+  const CustomBuildMostResentQuranView({super.key, required this.sura});
+
+  final SuraInfoModel sura;
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, SuraDetailsView.routeName,arguments: sura);
+      },
+      child:Container(
+        padding: const EdgeInsetsGeometry.symmetric(horizontal: AppPadding.p16,vertical: AppPadding.p10),
+        decoration: BoxDecoration(
+          color: AppColor.goldColor,
+          borderRadius: BorderRadiusGeometry.circular(AppBorderRadius.r20),
+        ),
+        child: Row(
+          children: [
+            Column(
+              crossAxisAlignment: .start,
+              mainAxisAlignment: .spaceBetween,
+              children: [
+                Text(
+                  sura.nameEN.toString(),
+                  style: AppTextStyle.textS24Style.copyWith(
+                    color: AppColor.blackColor
+                  ),
+                ),
+                Text(
+                  sura.nameAr.toString(),
+                  style: AppTextStyle.textS24Style.copyWith(
+                      color: AppColor.blackColor
+                  ),
+                ),
+                Text(
+                  "${sura.numVerse.toString()} Verses",
+                  style: AppTextStyle.textS14Style.copyWith(
+                      color: AppColor.blackColor
+                  ),
+                ),
+              ],
+            ),
+            Image.asset("assets/images/png_images/img_most_recent.png",color: Colors.black,)
+          ],
+        ),
+      ),
+    );
+  }
+}
