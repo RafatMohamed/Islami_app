@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:islami_app/core/shared/shared_pref_hive.dart';
 import '../../../../core/resources_app.dart';
-import '../../../../core/service/quran_service/quran_service.dart';
-import 'custom_build_suras_view.dart';
+import 'custom_most_resent_view.dart';
+import 'custom_sura_list_view.dart';
 
-class BodyQuranView extends StatelessWidget {
+class BodyQuranView extends StatefulWidget {
   const BodyQuranView({super.key});
+
+  @override
+  State<BodyQuranView> createState() => _BodyQuranViewState();
+}
+
+class _BodyQuranViewState extends State<BodyQuranView> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.sizeOf(context);
@@ -26,7 +31,7 @@ class BodyQuranView extends StatelessWidget {
             ),
           ),
         ),
-        CustomBuildMostResentView(size: size),
+        CustomBuildMostResentView(size: size,onTap:rebuildUI,),
         Padding(
           padding: const EdgeInsets.only(
             top: AppPadding.p10,
@@ -41,82 +46,16 @@ class BodyQuranView extends StatelessWidget {
             ),
           ),
         ),
-        Expanded(
-          child: ListView.separated(
-            shrinkWrap: true,
-            scrollDirection: .vertical,
-            padding: const EdgeInsets.symmetric(horizontal: AppPadding.p20),
-            itemCount: QuranService.getNumbersSura(),
-            itemBuilder: (_, index) {
-              return CustomBuildSuraQuranView(
-                sura: QuranService.getData(index),
-              );
-            },
-            separatorBuilder: (_, index) {
-              return const Divider(
-                height: 16,
-                color: AppColor.whiteColor,
-                indent: 44,
-                endIndent: 44,
-              );
-            },
-          ),
-        ),
+         CustomBuildSurasList(onTap: rebuildUI,),
       ],
     );
   }
-}
 
-class CustomBuildMostResentView extends StatefulWidget {
-  const CustomBuildMostResentView({
-    super.key,
-    required this.size,
-  });
+  void rebuildUI(){
+    setState(() {
 
-  final Size size;
-
-  @override
-  State<CustomBuildMostResentView> createState() => _CustomBuildMostResentViewState();
-}
-
-class _CustomBuildMostResentViewState extends State<CustomBuildMostResentView> {
-  @override
-  void setState(VoidCallback fn) {
-    SharedPrefHiveImp.loadSuraMostResent();
-    super.setState(fn);
-  }
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: widget.size.height * 0.17,
-      child: SharedPrefHiveImp.loadSuraMostResent().isEmpty
-          ? Center(
-              child: Text(
-                "Welcome ",
-                style: AppTextStyle.textS24Style.copyWith(
-                  color: AppColor.whiteColor,
-                ),
-                textAlign: .center,
-              ),
-            )
-          : ListView.separated(
-              scrollDirection: .horizontal,
-              shrinkWrap: true,
-              padding: const EdgeInsets.symmetric(
-                horizontal: AppPadding.p20,
-              ),
-              itemCount: SharedPrefHiveImp.loadSuraMostResent().length,
-              itemBuilder: (_, index) {
-                return CustomBuildMostResentQuranView(
-                  sura: QuranService.getData(
-                    SharedPrefHiveImp.loadSuraMostResent()[index] - 1,
-                  ),
-                );
-              },
-              separatorBuilder: (_, index) {
-                return const SizedBox(width: AppPadding.p16);
-              },
-            ),
-    );
+    });
   }
 }
+
+

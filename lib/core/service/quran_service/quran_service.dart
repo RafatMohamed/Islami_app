@@ -1,5 +1,7 @@
 import 'package:flutter/services.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import '../../../features/quran_view/model/sura_info_model.dart';
+import '../../const.dart';
 
 class QuranService {
   static final List<String> suraNameAr = [
@@ -356,6 +358,7 @@ class QuranService {
         (index) {
     return getData(index);
   },);
+
   static int getNumbersSura() {
     return suraNameAr.length;
   }
@@ -372,5 +375,40 @@ class QuranService {
   static Future<List<String>> readData(int index)async{
      final data = await rootBundle.loadString("assets/text/Suras/Suras/$index.txt");
     return data.split("\n");
+  }
+
+ static bool isSearchView = false;
+
+  static List<SuraInfoModel> filteredSearch = [];
+
+ static void onSearch(String query) {
+   if (query.isEmpty) {
+     filteredSearch.clear();
+     isSearchView = false;
+   } else {
+     filteredSearch = allSura.where((element) {
+       return element.nameAr.contains(
+         query.toString(),
+       ) ||
+           element.nameEN.toLowerCase().contains(
+             query.toString().toLowerCase(),
+           );
+     }).toList();
+     isSearchView = true;
+   }
+  }
+
+  static final Box<List<int>> box2 = Hive.box<List<int>>(AppConst.nameBoxSuraResentView);
+
+  static Future<void> saveSuraMostResent(int index) async {
+    List<int> sura = loadSuraMostResent();
+    sura.remove(index);
+    sura.insert(0,index);
+    await box2.put(AppConst.keyBoxSuraResentView, sura);
+  }
+
+  static List<int> loadSuraMostResent() {
+    final List<int> data = box2.get(AppConst.keyBoxSuraResentView) ?? [];
+    return data;
   }
 }

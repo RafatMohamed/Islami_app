@@ -6,15 +6,15 @@ import 'package:islami_app/generated/assets.dart';
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
-    required this.controller,
+    this.controller,
     required this.onChanged,
   });
-  final TextEditingController controller;
+  final TextEditingController? controller;
   final Function(String value) onChanged;
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
+    return TextField(
       enabled: true,
       controller: controller,
       onChanged: onChanged,
@@ -22,7 +22,7 @@ class CustomTextFormField extends StatelessWidget {
       textInputAction: .done,
       style: AppTextStyle.textS16Style,
       decoration: InputDecoration(
-        fillColor: Colors.transparent,
+        fillColor: AppColor.blackColor.withValues(alpha: 0.6),
         filled: true,
         hintText: AppText.suraName,
         contentPadding: const EdgeInsets.symmetric(
@@ -33,6 +33,7 @@ class CustomTextFormField extends StatelessWidget {
         hintStyle: AppTextStyle.textS16Style,
         border: buildOutlineInputBorderActive(),
         enabledBorder: buildOutlineInputBorderActive(),
+        focusedBorder: buildOutlineInputBorderActive(),
       ),
     );
   }

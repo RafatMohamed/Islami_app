@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/resources_app.dart';
 import '../../model/sura_info_model.dart';
-import 'custom_build_suras_view.dart';
+import 'custom_build_suras_item.dart';
 
 class SearchView extends StatelessWidget {
   const SearchView({super.key, required this.filteredSearch});
@@ -31,7 +31,7 @@ class SearchView extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: AppPadding.p20,),
             itemCount: filteredSearch.length,
             itemBuilder: (_, index) {
-              return CustomBuildSuraQuranView(sura: filteredSearch[index]);
+              return CustomBuildSuraQuranItem(sura: filteredSearch[index]);
             },
             separatorBuilder: (_, _) {
               return const SizedBox(

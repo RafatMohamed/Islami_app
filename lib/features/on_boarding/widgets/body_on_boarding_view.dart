@@ -16,11 +16,11 @@ class BodyOnBoardingView extends StatefulWidget {
 }
 
 class _BodyOnBoardingViewState extends State<BodyOnBoardingView> {
-  late ScrollController controller;
+  late PageController controller;
   int currentIndex = 0;
   @override
   void initState() {
-    controller = ScrollController(initialScrollOffset: 0);
+    controller = PageController();
     super.initState();
   }
 
@@ -70,11 +70,14 @@ class _BodyOnBoardingViewState extends State<BodyOnBoardingView> {
 
             Expanded(
               flex: 3,
-              child: ListView.builder(
+              child: PageView.builder(
                 controller: controller,
+                onPageChanged: (value) {
+                  currentIndex=value;
+                  setState(() {});
+                },
                 itemCount: itemsOnBoarderList.length,
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
                   final item = itemsOnBoarderList[index];
@@ -116,7 +119,9 @@ class _BodyOnBoardingViewState extends State<BodyOnBoardingView> {
               ),
             ),
 
-            const Padding(padding: EdgeInsetsGeometry.only(bottom: AppPadding.p16)),
+            const SizedBox(
+              height: 16,
+            )
           ],
         ),
         Positioned(

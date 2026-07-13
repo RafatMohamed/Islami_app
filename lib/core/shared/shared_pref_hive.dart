@@ -32,18 +32,4 @@ class SharedPrefHiveImp implements SharedPref {
   Future<void> clearObj(){
    return box.clear();
   }
-
-  static final Box<List<int>> box2 = Hive.box<List<int>>(AppConst.nameBoxSuraResentView);
-
-  static Future<void> saveSuraMostResent(int index) async {
-    List<int> sura =loadSuraMostResent();
-    sura.remove(index);
-    sura.insert(0,index);
-    await box2.put(AppConst.keyBoxSuraResentView, sura);
-  }
-
-  static List<int> loadSuraMostResent() {
-    final List<int> data = box2.get(AppConst.keyBoxSuraResentView) ??[];
-    return data;
-  }
 }
