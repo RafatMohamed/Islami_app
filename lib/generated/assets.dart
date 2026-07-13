@@ -71,6 +71,9 @@ class $AssetsPngImagesGen {
   final AssetGenImage imgLeftCornerHome = const AssetGenImage(
     'assets/images/png_images/img_left_corner_home.png',
   );
+  final AssetGenImage imgMostRecent = const AssetGenImage(
+    'assets/images/png_images/img_most_recent.png',
+  );
   final AssetGenImage imgRightCornerDetails = const AssetGenImage(
     'assets/images/png_images/img_right_corner_details.png',
   );
@@ -145,6 +148,7 @@ class $AssetsTextGen {
   final $AssetsHadeethGen hadeeth = const $AssetsHadeethGen();
   final $AssetsSurasGen suras = const $AssetsSurasGen();
 }
+
 
 class $AssetsHadeethGen {
   const $AssetsHadeethGen();
