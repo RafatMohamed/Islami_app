@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/core/resources_app.dart';
+import 'package:islami_app/features/quran_view/model/sura_info_model.dart';
 import 'package:islami_app/features/quran_view/view/quran_view.dart';
 import 'package:islami_app/features/soura_detailes_view/view/sura_details_view.dart';
 import 'package:islami_app/features/splash/view/splash_view.dart';
+import '../features/hadeth_detailes_view/view/sura_details_view.dart';
 import '../features/hadeth_view/view/hadeth_view.dart';
 import '../features/main_app_view/view/main_app_view.dart';
 import '../features/on_boarding/view/on_boarding_view.dart';
@@ -23,7 +25,11 @@ class IslamiApp extends StatelessWidget {
       SebhaView.routeName:(context) => const SebhaView(),
       RadioView.routeName:(context) => const RadioView(),
       TimeView.routeName:(context) => const TimeView(),
-      SuraDetailsView.routeName:(context) => const SuraDetailsView(),
+      SuraDetailsView.routeName:(context) {
+       final  SuraInfoModel sura =ModalRoute.of(context)!.settings.arguments as SuraInfoModel;
+       return  SuraDetailsView(sura:sura);
+      },
+      HadethDetailsView.routeName:(context) => const HadethDetailsView(),
   };
     return MaterialApp(
       debugShowCheckedModeBanner: false,

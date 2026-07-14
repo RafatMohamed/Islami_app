@@ -1,4 +1,6 @@
 class AppConst{
-  static const String  keyBox="isLogin";
-  static const String  nameBox="onBoarding";
+  static const String  keyBoxIsFirestLogin="isLoginKey";
+  static const String  nameBoxISFirestOpining="onBoarding";
+  static const String  nameBoxSuraResentView="SuraResentView";
+  static const String  keyBoxSuraResentView="SuraResentViewKey";
 }

@@ -52,6 +52,12 @@ class AppTextStyle {
       color: AppColor.goldColor,
       fontWeight: FontWeight.bold
   );
+  static const TextStyle textS36Style = TextStyle(
+      fontFamily: "Janna",
+      fontSize: 36,
+      color: AppColor.whiteColor,
+      fontWeight: FontWeight.bold
+  );
   static const TextStyle textS20Style = TextStyle(
       fontFamily: "Janna",
       fontSize: 20,
@@ -82,6 +88,7 @@ class AppText{
   static const String radioViewApp = "radioViewApp";
   static const String timeViewApp = "timeViewApp";
   static const String suraDetailsViewApp = "suraDetailsViewApp";
+  static const String hadethDetailsViewApp = "hadethDetailsViewApp";
 
 
   static const String quran = "Quran";
@@ -89,6 +96,7 @@ class AppText{
   static const String sebha = "Sebha";
   static const String radio = "Radio";
   static const String time = "Time";
+  static const String reciters = "Reciters";
 
 
   static const String label12ONBoarding = "Welcome To Islami App";
@@ -107,6 +115,10 @@ class AppText{
   static const String skip = "Skip";
   static const String finish = "Finish";
   static const String suraList = "Suras List";
+  static const String suraName = "Sura Name";
+  static const String searchResult = "Search Suras";
+  static const String mostResent = "Most Recently";
+  static const String sabehName = "سَبِّحِ اسْمَ رَبِّكَ الأعلى";
 
 }
 
@@ -122,7 +134,9 @@ class AppPadding{
 
 class AppBorderRadius{
   static const double r8=8.0;
+  static const double r12=12.0;
   static const double r16=16.0;
+  static const double r20=20.0;
   static const double r24=24.0;
   static const double r32=32.0;
 }

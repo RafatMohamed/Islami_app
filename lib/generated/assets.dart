@@ -53,6 +53,15 @@ class $AssetsPngImagesGen {
   final AssetGenImage backgroundHadeth = const AssetGenImage(
     'assets/images/png_images/background_hadeth.png',
   );
+  final AssetGenImage backgroundItemRadio = const AssetGenImage(
+    'assets/images/png_images/background_item_radio.png',
+  );
+  final AssetGenImage backgroundItemRadio2 = const AssetGenImage(
+    'assets/images/png_images/background_item_radio2.png',
+  );
+  final AssetGenImage backgroundItemRecirtes = const AssetGenImage(
+    'assets/images/png_images/background_item_recirtes.png',
+  );
   final AssetGenImage backgroundQuran = const AssetGenImage(
     'assets/images/png_images/background_quran.png',
   );
@@ -71,8 +80,14 @@ class $AssetsPngImagesGen {
   final AssetGenImage imgLeftCornerHome = const AssetGenImage(
     'assets/images/png_images/img_left_corner_home.png',
   );
+  final AssetGenImage imgMostRecent = const AssetGenImage(
+    'assets/images/png_images/img_most_recent.png',
+  );
   final AssetGenImage imgRightCornerDetails = const AssetGenImage(
     'assets/images/png_images/img_right_corner_details.png',
+  );
+  final AssetGenImage leftCornerHadeth = const AssetGenImage(
+    'assets/images/png_images/left_corner_hadeth.png',
   );
   final AssetGenImage
   moonLightShineThroughWindowIntoIslamicMosqueInterior = const AssetGenImage(
@@ -99,6 +114,12 @@ class $AssetsPngImagesGen {
   final AssetGenImage reading = const AssetGenImage(
     'assets/images/png_images/reading.png',
   );
+  final AssetGenImage rightCornerHadeth = const AssetGenImage(
+    'assets/images/png_images/right_corner_hadeth.png',
+  );
+  final AssetGenImage sebhaBodyImage = const AssetGenImage(
+    'assets/images/png_images/sebhaBodyImage.png',
+  );
   final AssetGenImage silhouetteWomanReadingQuran = const AssetGenImage(
     'assets/images/png_images/silhouette-woman-reading-quran.jpg',
   );
@@ -114,6 +135,9 @@ class $AssetsPngImagesGen {
   final AssetGenImage tajMahalAgraIndia = const AssetGenImage(
     'assets/images/png_images/taj-mahal-agra-india.jpg',
   );
+  final AssetGenImage topSebhaImg = const AssetGenImage(
+    'assets/images/png_images/topSebhaImg.png',
+  );
   final AssetGenImage
   verticalShotHassanIiMosqueCasablancaMorocco = const AssetGenImage(
     'assets/images/png_images/vertical-shot-hassan-ii-mosque-casablanca-morocco.jpg',
@@ -123,9 +147,18 @@ class $AssetsPngImagesGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  final SvgGenImage volumeIcon = const SvgGenImage(
+    'assets/icons/VolumeIcon.svg',
+  );
+  final SvgGenImage volumeCross = const SvgGenImage(
+    'assets/icons/Volume_cross.svg',
+  );
   final SvgGenImage hadeth = const SvgGenImage('assets/icons/hadeth.svg');
   final SvgGenImage iconNumSura = const SvgGenImage(
     'assets/icons/icon_num_sura.svg',
+  );
+  final SvgGenImage playingIcon = const SvgGenImage(
+    'assets/icons/playingIcon.svg',
   );
   final SvgGenImage quran = const SvgGenImage('assets/icons/quran.svg');
   final SvgGenImage radio = const SvgGenImage('assets/icons/radio.svg');
@@ -196,6 +229,7 @@ class $AssetsHadeethGen {
   final String h8 = 'assets/text/Hadeeth/Hadeeth/h8.txt';
   final String h9 = 'assets/text/Hadeeth/Hadeeth/h9.txt';
 }
+
 
 class $AssetsSurasGen {
   const $AssetsSurasGen();

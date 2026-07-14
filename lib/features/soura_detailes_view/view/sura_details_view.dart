@@ -1,23 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/core/resources_app.dart';
+import 'package:islami_app/core/service/quran_service/quran_service.dart';
 import 'package:islami_app/features/quran_view/model/sura_info_model.dart';
 import 'package:islami_app/features/soura_detailes_view/view/widget/custom_body_sura_details_view.dart';
 
-class SuraDetailsView extends StatelessWidget {
+class SuraDetailsView extends StatefulWidget {
   static const String routeName = "/${AppText.suraDetailsViewApp}";
-  const SuraDetailsView({super.key});
+  const SuraDetailsView({super.key, required this.sura});
+  final SuraInfoModel sura;
+  @override
+  State<SuraDetailsView> createState() => _SuraDetailsViewState();
+}
+
+
+class _SuraDetailsViewState extends State<SuraDetailsView> {
+  @override
+  void initState() {
+    QuranService.saveSuraMostResent(widget.sura.numberSura);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-  final SuraInfoModel sura= ModalRoute.of(context)!.settings.arguments as SuraInfoModel;
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          sura.nameEN,
-        ),
-      ),
-      body: CustomBodySuraDetails(
-        sura: sura,
-      ),
+      appBar: AppBar(title: Text(widget.sura.nameEN)),
+      body: CustomBodySuraDetails(sura:widget.sura),
     );
   }
 }

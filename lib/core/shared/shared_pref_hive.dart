@@ -8,21 +8,23 @@ class SharedPrefHiveImp implements SharedPref {
   factory SharedPrefHiveImp() {
     return instance;
   }
-  static final Box<bool> box = Hive.box<bool>(AppConst.nameBox);
+  static final Box<bool> box = Hive.box<bool>(AppConst.nameBoxISFirestOpining);
+
   @override
   Future<void> initSharedMain() async {
     await Hive.initFlutter();
-    await Hive.openBox<bool>(AppConst.nameBox);
+    await Hive.openBox<bool>(AppConst.nameBoxISFirestOpining);
+    await Hive.openBox<List<int>>(AppConst.nameBoxSuraResentView);
   }
 
   @override
   Future<void> saveObj(isOpen) async {
-    await box.put(AppConst.keyBox, isOpen);
+    await box.put(AppConst.keyBoxIsFirestLogin, isOpen);
   }
 
   @override
   bool getObj() {
-    final result = box.get(AppConst.keyBox);
+    final result = box.get(AppConst.keyBoxIsFirestLogin);
     return result ?? false;
   }
 

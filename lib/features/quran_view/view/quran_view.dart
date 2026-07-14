@@ -1,51 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/core/resources_app.dart';
 import 'package:islami_app/core/service/quran_service/quran_service.dart';
-import 'package:islami_app/features/quran_view/model/sura_info_model.dart';
-import 'package:islami_app/features/quran_view/view/widget/custom_build_suras_view.dart';
+import 'package:islami_app/features/quran_view/view/widget/body_quran_view.dart';
+import 'package:islami_app/features/quran_view/view/widget/search_view.dart';
+import '../../../core/widgets/custom_text_form_field.dart';
 
-class QuranView extends StatelessWidget {
+class QuranView extends StatefulWidget {
   static const String routeName = "/${AppText.quranViewApp}";
   const QuranView({super.key});
 
   @override
+  State<QuranView> createState() => _QuranViewState();
+}
+
+class _QuranViewState extends State<QuranView> {
+  @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: .start,
+      mainAxisAlignment: .start,
       children: [
         Padding(
-          padding:  const EdgeInsets.only(
-            top: AppPadding.p10,
-            bottom: AppPadding.p10,
-            left: AppPadding.p20
-          ),
-          child: Text(
-            textAlign: .start,
-            AppText.suraList,
-            style: AppTextStyle.textS16Style.copyWith(color: AppColor.whiteColor),
+          padding: const EdgeInsets.symmetric(horizontal: AppPadding.p16),
+          child: CustomTextFormField(
+            onChanged: (query) {
+              QuranService.onSearch(query);
+              setState(() {});
+            },
           ),
         ),
         Expanded(
-          child: ListView.separated(
-            padding:const EdgeInsets.symmetric(horizontal: AppPadding.p20) ,
-            itemCount: QuranService.getNumbersSura(),
-              itemBuilder: (_, index) {
-                return  CustomBuildSuraQuranView(
-                  sura: QuranService.getData(index),
-                );
-              },
-            separatorBuilder: (_, index) {
-              return const Divider(
-                height: 16,
-                color: AppColor.whiteColor,
-                indent: 44,
-                endIndent: 44,
-              );
-            },
-          ),
+          child: QuranService.isSearchView
+              ? SearchView(filteredSearch: QuranService.filteredSearch)
+              : const BodyQuranView(),
         ),
       ],
     );
   }
 }
-
