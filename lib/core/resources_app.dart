@@ -22,6 +22,7 @@ class AppThem{
     ),
     scaffoldBackgroundColor:AppColor.blackColor,
     fontFamily:"KamaliOTF",
+
   );
 }
 
