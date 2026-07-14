@@ -52,6 +52,12 @@ class AppTextStyle {
       color: AppColor.goldColor,
       fontWeight: FontWeight.bold
   );
+  static const TextStyle textS36Style = TextStyle(
+      fontFamily: "Janna",
+      fontSize: 36,
+      color: AppColor.whiteColor,
+      fontWeight: FontWeight.bold
+  );
   static const TextStyle textS20Style = TextStyle(
       fontFamily: "Janna",
       fontSize: 20,
@@ -111,6 +117,7 @@ class AppText{
   static const String suraName = "Sura Name";
   static const String searchResult = "Search Suras";
   static const String mostResent = "Most Recently";
+  static const String sabehName = "سَبِّحِ اسْمَ رَبِّكَ الأعلى";
 
 }
 
