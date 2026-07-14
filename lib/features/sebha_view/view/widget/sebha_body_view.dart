@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../../core/resources_app.dart';
 import '../../../../generated/assets.dart';
 
