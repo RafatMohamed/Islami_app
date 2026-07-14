@@ -122,6 +122,7 @@ class _BodyOnBoardingViewState extends State<BodyOnBoardingView> {
             const SizedBox(
               height: 16,
             )
+
           ],
         ),
         Positioned(
@@ -149,13 +150,13 @@ class _BodyOnBoardingViewState extends State<BodyOnBoardingView> {
     }
     isNext?currentIndex++:currentIndex--;
     setState(() {
-      controller.animateTo(currentIndex*size.width, duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
+      controller.animateTo(currentIndex*size.width, duration: const Duration(milliseconds: 500), curve: Curves.linearToEaseOut);
     });
   }
   void onTapDots({required final Size size,required final int index})async{
     setState(() {
       currentIndex=index;
-      controller.animateTo(currentIndex*size.width, duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
+      controller.animateTo(currentIndex*size.width, duration: const Duration(milliseconds: 500), curve: Curves.linearToEaseOut);
     });
   }
 }

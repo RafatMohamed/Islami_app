@@ -30,29 +30,26 @@ class _MainAppViewState extends State<MainAppView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        bottom: false,
-        child: Stack(
-          alignment: .topEnd,
-          fit: .expand,
-          children: [
-            CustomBodyMainApp(tabsView: tabsView, currentIndex: currentIndex),
-            Positioned(
-              bottom: AppPadding.p20,
-              right: AppPadding.p16,
-              left: AppPadding.p16,
-              child: BottomNavBarWidget(
-                currentIndex: currentIndex,
-                selectItemNav: (int index) {
-                  FocusScope.of(context).unfocus();
-                  setState(() {
-                    currentIndex = index;
-                  });
-                },
-              ),
+      body: Stack(
+        alignment: .topStart,
+        fit: .expand,
+        children: [
+          CustomBodyMainApp(tabsView: tabsView, currentIndex: currentIndex),
+          Positioned(
+            bottom: AppPadding.p20,
+            right: AppPadding.p16,
+            left: AppPadding.p16,
+            child: BottomNavBarWidget(
+              currentIndex: currentIndex,
+              selectItemNav: (int index) {
+                FocusScope.of(context).unfocus();
+                setState(() {
+                  currentIndex = index;
+                });
+              },
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
