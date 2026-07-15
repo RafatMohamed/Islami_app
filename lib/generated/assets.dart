@@ -157,6 +157,12 @@ class $AssetsIconsGen {
   final SvgGenImage iconNumSura = const SvgGenImage(
     'assets/icons/icon_num_sura.svg',
   );
+  final SvgGenImage pauseCircleIcon = const SvgGenImage(
+    'assets/icons/pause_circle_icon.svg',
+  );
+  final SvgGenImage playCircleIcon = const SvgGenImage(
+    'assets/icons/play_circle_icon.svg',
+  );
   final SvgGenImage playingIcon = const SvgGenImage(
     'assets/icons/playingIcon.svg',
   );
@@ -164,6 +170,15 @@ class $AssetsIconsGen {
   final SvgGenImage radio = const SvgGenImage('assets/icons/radio.svg');
   final SvgGenImage sebha = const SvgGenImage('assets/icons/sebha.svg');
   final SvgGenImage time = const SvgGenImage('assets/icons/time.svg');
+  final SvgGenImage volumeDownIcon = const SvgGenImage(
+    'assets/icons/volume_down_icon.svg',
+  );
+  final SvgGenImage volumeOffIcon = const SvgGenImage(
+    'assets/icons/volume_off_icon.svg',
+  );
+  final SvgGenImage volumeUpIcon = const SvgGenImage(
+    'assets/icons/volume_up_icon.svg',
+  );
 }
 
 class $AssetsTextGen {
@@ -229,7 +244,6 @@ class $AssetsHadeethGen {
   final String h8 = 'assets/text/Hadeeth/Hadeeth/h8.txt';
   final String h9 = 'assets/text/Hadeeth/Hadeeth/h9.txt';
 }
-
 
 
 class $AssetsSurasGen {
