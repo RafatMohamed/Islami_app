@@ -89,6 +89,6 @@ class CustomButtonRadioPlay extends StatelessWidget {
   final bool isDecreaseVolume;
   @override
   Widget build(BuildContext context) {
-    return Transform.rotate(angle:isDecreaseVolume?3.15:0,child: SvgPicture.asset(icon,colorFilter: ColorFilter.mode(AppColor.blackColor, .srcIn),fit: .cover,width: 35));
+    return Transform.rotate(angle:isDecreaseVolume?3.15:0,child: SvgPicture.asset(icon,colorFilter: const ColorFilter.mode(AppColor.blackColor, .srcIn),fit: .cover,width: 35));
   }
 }

@@ -29,7 +29,7 @@ class _RadioBodyViewState extends State<RadioBodyView> {
   int currentIndexTap = 0;
   int currentIndexPLay = -1;
   double volume=0.5;
-  void play(index){
+  void play(int index){
     if(currentIndexPLay==index){
       currentIndexPLay =-1;
     }else{
