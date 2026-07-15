@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:islami_app/core/shared/shared_pref_hive.dart';
 import '../../../../core/resources_app.dart';
@@ -25,6 +27,26 @@ class _RadioBodyViewState extends State<RadioBodyView> {
     "Majed Al-Enezi",
   ];
   int currentIndexTap = 0;
+  int currentIndexPLay = -1;
+  double volume=0.5;
+  void play(index){
+    if(currentIndexPLay==index){
+      currentIndexPLay =-1;
+    }else{
+      currentIndexPLay=index;
+    }
+    setState(() {});
+  }
+  void increaseVolume(){
+    if(volume>=1) return ;
+    volume+=0.1;
+    log(volume.toString());
+  }
+  void decreaseVolume(){
+    if(volume<=0) return ;
+    volume-=0.1;
+    log(volume.toString());
+  }
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.sizeOf(context);
@@ -67,6 +89,14 @@ class _RadioBodyViewState extends State<RadioBodyView> {
                 size: size,
                 title: currentList[index],
                 isRadio: currentIndexTap == 0,
+                isPlaying: currentIndexPLay==index,
+                play: () => play(index),
+                increaseVolume: () {
+                  increaseVolume();
+                },
+                decreaseVolume: (){
+                  decreaseVolume();
+                },
               );
             },
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/resources_app.dart';
@@ -10,11 +11,19 @@ class CustomBuildBodyItemRadio extends StatelessWidget {
     required this.size,
     required this.title,
     required this.isRadio,
+    required this.play,
+    required this.increaseVolume,
+    required this.decreaseVolume,
+    required this.isPlaying,
   });
 
   final Size size;
   final String title;
   final bool isRadio;
+  final bool isPlaying;
+  final Function() play;
+  final Function() increaseVolume;
+  final Function() decreaseVolume;
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +50,7 @@ class CustomBuildBodyItemRadio extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            isRadio ?"Radio $title":title,
+            isRadio ? "Radio $title" : title,
             style: AppTextStyle.textS20Style.copyWith(
               color: AppColor.blackColor,
             ),
@@ -52,13 +61,34 @@ class CustomBuildBodyItemRadio extends StatelessWidget {
           Row(
             mainAxisAlignment: .spaceEvenly,
             children: [
-              SvgPicture.asset(Assets.icons.volumeCross.path),
-              SvgPicture.asset(Assets.icons.playingIcon.path),
-              SvgPicture.asset(Assets.icons.volumeIcon.path),
+              GestureDetector(
+                onTap: decreaseVolume,
+                child:CustomButtonRadioPlay(icon:Assets.icons.volumeDownIcon.path,isDecreaseVolume: true,),
+              ),
+              GestureDetector(
+                onTap: play,
+                child: isPlaying? CustomButtonRadioPlay(icon: Assets.icons.pauseCircleIcon.path,):CustomButtonRadioPlay(icon: Assets.icons.playCircleIcon.path,),
+              ),
+              GestureDetector(
+                onTap: increaseVolume,
+                child: CustomButtonRadioPlay(icon: Assets.icons.volumeUpIcon.path,),
+              ),
             ],
           ),
         ],
       ),
     );
+  }
+}
+
+class CustomButtonRadioPlay extends StatelessWidget {
+  const CustomButtonRadioPlay({
+    super.key, required this.icon, this.isDecreaseVolume=false
+  });
+  final String icon;
+  final bool isDecreaseVolume;
+  @override
+  Widget build(BuildContext context) {
+    return Transform.rotate(angle:isDecreaseVolume?3.15:0,child: SvgPicture.asset(icon,colorFilter: ColorFilter.mode(AppColor.blackColor, .srcIn),fit: .cover,width: 35));
   }
 }
