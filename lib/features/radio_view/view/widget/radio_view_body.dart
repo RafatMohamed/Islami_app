@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:islami_app/core/shared/shared_pref_hive.dart';
 import '../../../../core/resources_app.dart';
 import 'custom_build_radio_item.dart';
 import 'custom_build_tab_radio.dart';
@@ -67,6 +68,7 @@ class _RadioBodyViewState extends State<RadioBodyView> {
                 onTap: () {
                   setState(() {
                     currentIndexTap = index;
+                    SharedPrefHiveImp.instance.clearObj();
                   });
                 },
                 child: CustomBuildTabRadio(
