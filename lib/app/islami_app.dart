@@ -4,6 +4,7 @@ import 'package:islami_app/features/quran_view/model/sura_info_model.dart';
 import 'package:islami_app/features/quran_view/view/quran_view.dart';
 import 'package:islami_app/features/soura_detailes_view/view/sura_details_view.dart';
 import 'package:islami_app/features/splash/view/splash_view.dart';
+import '../features/azkar_view/view/azkar_view.dart';
 import '../features/hadeth_detailes_view/view/sura_details_view.dart';
 import '../features/hadeth_view/view/hadeth_view.dart';
 import '../features/main_app_view/view/main_app_view.dart';
@@ -25,6 +26,7 @@ class IslamiApp extends StatelessWidget {
       SebhaView.routeName:(context) => const SebhaView(),
       RadioView.routeName:(context) => const RadioView(),
       TimeView.routeName:(context) => const TimeView(),
+      AzkarView.routeName:(context) => const AzkarView(),
       SuraDetailsView.routeName:(context) {
        final  SuraInfoModel sura =ModalRoute.of(context)!.settings.arguments as SuraInfoModel;
        return  SuraDetailsView(sura:sura);
@@ -38,6 +40,7 @@ class IslamiApp extends StatelessWidget {
       darkTheme: AppThem.darkTheme,
       themeMode:ThemeMode.dark,
       routes:routeApp,
+      initialRoute: AzkarView.routeName,
     );
   }
 }

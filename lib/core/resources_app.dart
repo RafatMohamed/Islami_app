@@ -85,6 +85,7 @@ class AppText{
   static const String routeOnBoardingApp = "onBoarding";
   static const String quranViewApp = "quranViewApp";
   static const String hadethViewApp = "hadethViewApp";
+  static const String azkarViewApp = "AzkarViewApp";
   static const String sebhaViewApp = "sebhaViewApp";
   static const String radioViewApp = "radioViewApp";
   static const String timeViewApp = "timeViewApp";
