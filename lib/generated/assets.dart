@@ -16,121 +16,174 @@ class $AssetsImagesGen {
   const $AssetsImagesGen();
 
   final $AssetsPngImagesGen pngImages = const $AssetsPngImagesGen();
-  final String pNGImages20260705T204516Z3001 = 'assets/images/PNG Images-20260705T204516Z-3-001.zip';
-  final String sVGImages20260705T204507Z3001 = 'assets/images/SVG Images-20260705T204507Z-3-001.zip';
+  final String pNGImages20260705T204516Z3001 =
+      'assets/images/PNG Images-20260705T204516Z-3-001.zip';
+  final String sVGImages20260705T204507Z3001 =
+      'assets/images/SVG Images-20260705T204507Z-3-001.zip';
 }
 
 class $AssetsPngImagesGen {
   const $AssetsPngImagesGen();
 
   final AssetGenImage glow = const AssetGenImage(
-      'assets/images/png_images/Glow.png');
+    'assets/images/png_images/Glow.png',
+  );
   final AssetGenImage glow2 = const AssetGenImage(
-      'assets/images/png_images/Glow2.png');
+    'assets/images/png_images/Glow2.png',
+  );
   final AssetGenImage hadithCardBackGround = const AssetGenImage(
-      'assets/images/png_images/HadithCardBackGround.png');
+    'assets/images/png_images/HadithCardBackGround.png',
+  );
   final AssetGenImage hadithCardBackGroundWhite = const AssetGenImage(
-      'assets/images/png_images/HadithCardBackGroundWhite.png');
+    'assets/images/png_images/HadithCardBackGroundWhite.png',
+  );
   final AssetGenImage intro1 = const AssetGenImage(
-      'assets/images/png_images/Intro 1.png');
+    'assets/images/png_images/Intro 1.png',
+  );
   final AssetGenImage mosque01 = const AssetGenImage(
-      'assets/images/png_images/Mosque-01.png');
+    'assets/images/png_images/Mosque-01.png',
+  );
   final AssetGenImage mosque02 = const AssetGenImage(
-      'assets/images/png_images/Mosque-02.png');
+    'assets/images/png_images/Mosque-02.png',
+  );
   final AssetGenImage shape04 = const AssetGenImage(
-      'assets/images/png_images/Shape-04.png');
+    'assets/images/png_images/Shape-04.png',
+  );
   final AssetGenImage shape07 = const AssetGenImage(
-      'assets/images/png_images/Shape-07.png');
+    'assets/images/png_images/Shape-07.png',
+  );
   final AssetGenImage background = const AssetGenImage(
-      'assets/images/png_images/background.png');
+    'assets/images/png_images/background.png',
+  );
   final AssetGenImage backgroundHadeth = const AssetGenImage(
-      'assets/images/png_images/background_hadeth.png');
+    'assets/images/png_images/background_hadeth.png',
+  );
   final AssetGenImage backgroundItemRadio = const AssetGenImage(
-      'assets/images/png_images/background_item_radio.png');
+    'assets/images/png_images/background_item_radio.png',
+  );
   final AssetGenImage backgroundItemRadio2 = const AssetGenImage(
-      'assets/images/png_images/background_item_radio2.png');
+    'assets/images/png_images/background_item_radio2.png',
+  );
   final AssetGenImage backgroundItemRecirtes = const AssetGenImage(
-      'assets/images/png_images/background_item_recirtes.png');
+    'assets/images/png_images/background_item_recirtes.png',
+  );
   final AssetGenImage backgroundQuran = const AssetGenImage(
-      'assets/images/png_images/background_quran.png');
+    'assets/images/png_images/background_quran.png',
+  );
   final AssetGenImage backgroundRadio = const AssetGenImage(
-      'assets/images/png_images/background_radio.png');
+    'assets/images/png_images/background_radio.png',
+  );
   final AssetGenImage backgroundSebha = const AssetGenImage(
-      'assets/images/png_images/background_sebha.png');
+    'assets/images/png_images/background_sebha.png',
+  );
   final AssetGenImage backgroundTime = const AssetGenImage(
-      'assets/images/png_images/background_time.png');
+    'assets/images/png_images/background_time.png',
+  );
   final AssetGenImage closeUpIslamicNewYearWithQuranBooks = const AssetGenImage(
-      'assets/images/png_images/close-up-islamic-new-year-with-quran-books.jpg');
+    'assets/images/png_images/close-up-islamic-new-year-with-quran-books.jpg',
+  );
   final AssetGenImage imgLeftCornerHome = const AssetGenImage(
-      'assets/images/png_images/img_left_corner_home.png');
+    'assets/images/png_images/img_left_corner_home.png',
+  );
   final AssetGenImage imgMostRecent = const AssetGenImage(
-      'assets/images/png_images/img_most_recent.png');
+    'assets/images/png_images/img_most_recent.png',
+  );
   final AssetGenImage imgRightCornerDetails = const AssetGenImage(
-      'assets/images/png_images/img_right_corner_details.png');
+    'assets/images/png_images/img_right_corner_details.png',
+  );
   final AssetGenImage leftCornerHadeth = const AssetGenImage(
-      'assets/images/png_images/left_corner_hadeth.png');
-  final AssetGenImage moonLightShineThroughWindowIntoIslamicMosqueInterior = const AssetGenImage(
-      'assets/images/png_images/moon-light-shine-through-window-into-islamic-mosque-interior.jpg');
+    'assets/images/png_images/left_corner_hadeth.png',
+  );
+  final AssetGenImage
+  moonLightShineThroughWindowIntoIslamicMosqueInterior = const AssetGenImage(
+    'assets/images/png_images/moon-light-shine-through-window-into-islamic-mosque-interior.jpg',
+  );
   final AssetGenImage onBoarding1 = const AssetGenImage(
-      'assets/images/png_images/onBoarding1.png');
+    'assets/images/png_images/onBoarding1.png',
+  );
   final AssetGenImage onBoarding2 = const AssetGenImage(
-      'assets/images/png_images/onBoarding2.png');
+    'assets/images/png_images/onBoarding2.png',
+  );
   final AssetGenImage onBoarding3 = const AssetGenImage(
-      'assets/images/png_images/onBoarding3.png');
+    'assets/images/png_images/onBoarding3.png',
+  );
   final AssetGenImage onBoarding4 = const AssetGenImage(
-      'assets/images/png_images/onBoarding4.png');
+    'assets/images/png_images/onBoarding4.png',
+  );
   final AssetGenImage onBoarding5 = const AssetGenImage(
-      'assets/images/png_images/onBoarding5.png');
+    'assets/images/png_images/onBoarding5.png',
+  );
   final AssetGenImage quranSura = const AssetGenImage(
-      'assets/images/png_images/quranSura.png');
+    'assets/images/png_images/quranSura.png',
+  );
   final AssetGenImage reading = const AssetGenImage(
-      'assets/images/png_images/reading.png');
+    'assets/images/png_images/reading.png',
+  );
   final AssetGenImage rightCornerHadeth = const AssetGenImage(
-      'assets/images/png_images/right_corner_hadeth.png');
+    'assets/images/png_images/right_corner_hadeth.png',
+  );
   final AssetGenImage sebhaBodyImage = const AssetGenImage(
-      'assets/images/png_images/sebhaBodyImage.png');
+    'assets/images/png_images/sebhaBodyImage.png',
+  );
   final AssetGenImage silhouetteWomanReadingQuran = const AssetGenImage(
-      'assets/images/png_images/silhouette-woman-reading-quran.jpg');
+    'assets/images/png_images/silhouette-woman-reading-quran.jpg',
+  );
   final AssetGenImage splashBranding = const AssetGenImage(
-      'assets/images/png_images/splash_branding.png');
+    'assets/images/png_images/splash_branding.png',
+  );
   final AssetGenImage splashImage = const AssetGenImage(
-      'assets/images/png_images/splash_image.png');
+    'assets/images/png_images/splash_image.png',
+  );
   final AssetGenImage splashImageAndroid12 = const AssetGenImage(
-      'assets/images/png_images/splash_image_android12.png');
+    'assets/images/png_images/splash_image_android12.png',
+  );
   final AssetGenImage tajMahalAgraIndia = const AssetGenImage(
-      'assets/images/png_images/taj-mahal-agra-india.jpg');
+    'assets/images/png_images/taj-mahal-agra-india.jpg',
+  );
   final AssetGenImage topSebhaImg = const AssetGenImage(
-      'assets/images/png_images/topSebhaImg.png');
-  final AssetGenImage verticalShotHassanIiMosqueCasablancaMorocco = const AssetGenImage(
-      'assets/images/png_images/vertical-shot-hassan-ii-mosque-casablanca-morocco.jpg');
+    'assets/images/png_images/topSebhaImg.png',
+  );
+  final AssetGenImage
+  verticalShotHassanIiMosqueCasablancaMorocco = const AssetGenImage(
+    'assets/images/png_images/vertical-shot-hassan-ii-mosque-casablanca-morocco.jpg',
+  );
 }
 
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
   final SvgGenImage volumeIcon = const SvgGenImage(
-      'assets/icons/VolumeIcon.svg');
+    'assets/icons/VolumeIcon.svg',
+  );
   final SvgGenImage volumeCross = const SvgGenImage(
-      'assets/icons/Volume_cross.svg');
+    'assets/icons/Volume_cross.svg',
+  );
   final SvgGenImage hadeth = const SvgGenImage('assets/icons/hadeth.svg');
   final SvgGenImage iconNumSura = const SvgGenImage(
-      'assets/icons/icon_num_sura.svg');
+    'assets/icons/icon_num_sura.svg',
+  );
   final SvgGenImage pauseCircleIcon = const SvgGenImage(
-      'assets/icons/pause_circle_icon.svg');
+    'assets/icons/pause_circle_icon.svg',
+  );
   final SvgGenImage playCircleIcon = const SvgGenImage(
-      'assets/icons/play_circle_icon.svg');
+    'assets/icons/play_circle_icon.svg',
+  );
   final SvgGenImage playingIcon = const SvgGenImage(
-      'assets/icons/playingIcon.svg');
+    'assets/icons/playingIcon.svg',
+  );
   final SvgGenImage quran = const SvgGenImage('assets/icons/quran.svg');
   final SvgGenImage radio = const SvgGenImage('assets/icons/radio.svg');
   final SvgGenImage sebha = const SvgGenImage('assets/icons/sebha.svg');
   final SvgGenImage time = const SvgGenImage('assets/icons/time.svg');
   final SvgGenImage volumeDownIcon = const SvgGenImage(
-      'assets/icons/volume_down_icon.svg');
+    'assets/icons/volume_down_icon.svg',
+  );
   final SvgGenImage volumeOffIcon = const SvgGenImage(
-      'assets/icons/volume_off_icon.svg');
+    'assets/icons/volume_off_icon.svg',
+  );
   final SvgGenImage volumeUpIcon = const SvgGenImage(
-      'assets/icons/volume_up_icon.svg');
+    'assets/icons/volume_up_icon.svg',
+  );
 }
 
 class $AssetsTextGen {
@@ -140,11 +193,7 @@ class $AssetsTextGen {
   final $AssetsSurasGen suras = const $AssetsSurasGen();
 }
 
-class $AssetsHadeethGen {
-  const $AssetsHadeethGen();
 
-  final $AssetsHadeethGen hadeeth = const $AssetsHadeethGen();
-}
 
 class $AssetsHadeethGen {
   const $AssetsHadeethGen();
@@ -201,11 +250,6 @@ class $AssetsHadeethGen {
   final String h9 = 'assets/text/Hadeeth/Hadeeth/h9.txt';
 }
 
-class $AssetsSurasGen {
-  const $AssetsSurasGen();
-
-  final $AssetsSurasGen suras = const $AssetsSurasGen();
-}
 
 class $AssetsSurasGen {
   const $AssetsSurasGen();
@@ -337,7 +381,6 @@ class AssetGenImage {
 
   final String _assetName;
 
-
   final Size? size;
   final Set<String> flavors;
 
@@ -394,15 +437,8 @@ class AssetGenImage {
     );
   }
 
-  ImageProvider provider({
-    AssetBundle? bundle,
-    String? package,
-  }) {
-    return AssetImage(
-      _assetName,
-      bundle: bundle,
-      package: package,
-    );
+  ImageProvider provider({AssetBundle? bundle, String? package}) {
+    return AssetImage(_assetName, bundle: bundle, package: package);
   }
 
   Widget custom({
@@ -480,4 +516,3 @@ class SvgGenImage {
 
   String get keyName => _assetName;
 }
-
