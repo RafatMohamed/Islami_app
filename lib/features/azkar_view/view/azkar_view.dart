@@ -2,12 +2,8 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:islami_app/core/resources_app.dart';
-import 'package:islami_app/core/service/hadeth_service/hadeth_service.dart';
-import 'package:islami_app/features/azkar_view/model/azkar_model.dart';
 import 'package:islami_app/features/azkar_view/services/azkar_services.dart';
 import 'package:islami_app/features/azkar_view/view/widget/custom_build_hadeth_view.dart';
-import 'package:islami_app/features/hadeth_detailes_view/view/sura_details_view.dart';
-import 'package:islami_app/features/hadeth_view/model/hadeth_model.dart';
 
 class AzkarView extends StatefulWidget {
   static const String routeName = "/${AppText.azkarViewApp}";
@@ -22,7 +18,6 @@ class _AzkarViewState extends State<AzkarView> {
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.sizeOf(context);
     return Scaffold(
       backgroundColor: Colors.transparent,
       body:FutureBuilder(

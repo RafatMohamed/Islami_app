@@ -10,7 +10,6 @@ class CustomBuildBodyItemRadio extends StatelessWidget {
     super.key,
     required this.size,
     required this.title,
-    required this.isRadio,
     required this.play,
     required this.increaseVolume,
     required this.decreaseVolume,
@@ -19,7 +18,6 @@ class CustomBuildBodyItemRadio extends StatelessWidget {
 
   final Size size;
   final String title;
-  final bool isRadio;
   final bool isPlaying;
   final Function() play;
   final Function() increaseVolume;
@@ -39,7 +37,7 @@ class CustomBuildBodyItemRadio extends StatelessWidget {
         image: DecorationImage(
           alignment: .bottomCenter,
           image: AssetImage(
-            isRadio
+            isPlaying
                 ? Assets.images.pngImages.backgroundItemRadio.path
                 : Assets.images.pngImages.backgroundItemRecirtes.path,
           ),
@@ -50,7 +48,7 @@ class CustomBuildBodyItemRadio extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            isRadio ? "Radio $title" : title,
+            title,
             style: AppTextStyle.textS20Style.copyWith(
               color: AppColor.blackColor,
             ),

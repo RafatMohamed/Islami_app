@@ -194,7 +194,6 @@ class $AssetsTextGen {
 }
 
 
-
 class $AssetsHadeethGen {
   const $AssetsHadeethGen();
 

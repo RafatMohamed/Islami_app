@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/core/resources_app.dart';
 import 'package:islami_app/features/azkar_view/model/azkar_model.dart';
-import 'package:islami_app/features/hadeth_view/model/hadeth_model.dart';
 import 'package:islami_app/generated/assets.dart';
 
 class CustomBuildAzkarCardView extends StatelessWidget {
