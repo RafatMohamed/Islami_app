@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/resources_app.dart';
+import '../../../soura_detailes_view/view/sura_details_view.dart';
 import '../../model/sura_info_model.dart';
 import 'custom_build_suras_item.dart';
 
@@ -28,15 +29,22 @@ class SearchView extends StatelessWidget {
         ),
         Expanded(
           child: ListView.separated(
-            padding: const EdgeInsets.symmetric(horizontal: AppPadding.p20,),
+            padding: const EdgeInsets.symmetric(horizontal: AppPadding.p20),
             itemCount: filteredSearch.length,
-            itemBuilder: (_, index) {
-              return CustomBuildSuraQuranItem(sura: filteredSearch[index]);
+            itemBuilder: (_, index){
+              return GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    SuraDetailsView.routeName,
+                    arguments: filteredSearch[index],
+                  );
+                },
+                child: CustomBuildSuraQuranItem(sura: filteredSearch[index]),
+              );
             },
             separatorBuilder: (_, _) {
-              return const SizedBox(
-                height: 10,
-              );
+              return const SizedBox(height: 10);
             },
           ),
         ),

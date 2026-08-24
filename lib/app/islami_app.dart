@@ -38,6 +38,7 @@ class IslamiApp extends StatelessWidget {
       darkTheme: AppThem.darkTheme,
       themeMode:ThemeMode.dark,
       routes:routeApp,
+      initialRoute: SplashView.routeName,
     );
   }
 }

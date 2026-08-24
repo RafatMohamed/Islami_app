@@ -21,6 +21,7 @@ class CustomTextFormField extends StatelessWidget {
       keyboardType: .text,
       textInputAction: .done,
       style: AppTextStyle.textS16Style,
+      cursorColor: AppColor.goldColor,
       decoration: InputDecoration(
         fillColor: AppColor.blackColor.withValues(alpha: 0.6),
         filled: true,

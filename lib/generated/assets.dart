@@ -8,6 +8,7 @@ class Assets {
 
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsJsonGen json = $AssetsJsonGen();
   static const $AssetsTextGen text = $AssetsTextGen();
 }
 
@@ -15,6 +16,10 @@ class $AssetsImagesGen {
   const $AssetsImagesGen();
 
   final $AssetsPngImagesGen pngImages = const $AssetsPngImagesGen();
+  final String pNGImages20260705T204516Z3001 =
+      'assets/images/PNG Images-20260705T204516Z-3-001.zip';
+  final String sVGImages20260705T204507Z3001 =
+      'assets/images/SVG Images-20260705T204507Z-3-001.zip';
 }
 
 class $AssetsPngImagesGen {
@@ -187,7 +192,6 @@ class $AssetsTextGen {
   final $AssetsHadeethGen hadeeth = const $AssetsHadeethGen();
   final $AssetsSurasGen suras = const $AssetsSurasGen();
 }
-
 
 
 class $AssetsHadeethGen {
@@ -363,6 +367,12 @@ class $AssetsSurasGen {
   final String a97 = 'assets/text/Suras/Suras/97.txt';
   final String a98 = 'assets/text/Suras/Suras/98.txt';
   final String a99 = 'assets/text/Suras/Suras/99.txt';
+}
+
+class $AssetsJsonGen {
+  const $AssetsJsonGen();
+
+  final String azkar = 'assets/json/azkar.json';
 }
 
 class AssetGenImage {

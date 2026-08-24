@@ -4,9 +4,11 @@ import 'package:islami_app/core/resources_app.dart';
 import 'package:islami_app/features/bottom_navigation_bar/widgets/bottom_nav_bar_widget.dart';
 import 'package:islami_app/features/hadeth_view/view/hadeth_view.dart';
 import 'package:islami_app/features/quran_view/view/quran_view.dart';
+import 'package:islami_app/features/radio_view/ViewModel/providers/radio_provider.dart';
 import 'package:islami_app/features/radio_view/view/radio_view.dart';
 import 'package:islami_app/features/sebha_view/view/sebha_view.dart';
 import 'package:islami_app/features/time_view/view/time_view.dart';
+import 'package:provider/provider.dart';
 
 import '../widgets/custom_body_main_app.dart';
 
@@ -24,7 +26,15 @@ class _MainAppViewState extends State<MainAppView> {
     ViewModelTabs(tabs: const QuranView(), backGroundImagePath: "quran"),
     ViewModelTabs(tabs: const HadethView(), backGroundImagePath: "hadeth"),
     ViewModelTabs(tabs: const SebhaView(), backGroundImagePath: "sebha"),
-    ViewModelTabs(tabs: const RadioView(), backGroundImagePath: "radio"),
+    ViewModelTabs(
+      tabs: ChangeNotifierProvider(
+        create: (context) => RadioProvider()..getReciters()..getRadio(),
+        builder: (context, child) {
+          return const RadioView();
+        },
+      ),
+      backGroundImagePath: "radio",
+    ),
     ViewModelTabs(tabs: const TimeView(), backGroundImagePath: "time"),
   ];
   @override
@@ -54,4 +64,3 @@ class _MainAppViewState extends State<MainAppView> {
     );
   }
 }
-
